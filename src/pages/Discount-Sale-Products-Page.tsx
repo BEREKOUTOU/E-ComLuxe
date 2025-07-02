@@ -1,5 +1,3 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
-
 import React, { useState, useEffect } from 'react';
 
 const App: React.FC = () => {

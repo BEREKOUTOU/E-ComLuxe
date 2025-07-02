@@ -343,7 +343,7 @@ return (
     <div className="container mx-auto px-4 py-3">
       <div className="flex items-center text-sm text-gray-500">
         <a
-          href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f"
+          href="/"
           data-readdy="true"
           className="hover:text-pink-600 transition cursor-pointer"
         >
