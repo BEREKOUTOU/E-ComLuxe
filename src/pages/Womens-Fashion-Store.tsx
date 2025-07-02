@@ -259,11 +259,11 @@ return (
         </a>
         {/* Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Home</Link>
-          <span className="text-pink-600 font-medium whitespace-nowrap !rounded-button cursor-default">Women</span>
-          <Link to="/men" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Men</Link>
-          <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Kids</Link>
-          <Link to="/accessories" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Accessories</Link>
+          <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Accueil</Link>
+          <span className="text-pink-600 font-medium whitespace-nowrap !rounded-button cursor-default">Femmes</span>
+          <Link to="/men" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Hommes</Link>
+          <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Enfants</Link>
+          <Link to="/accessories" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Accessoires</Link>
         </nav>
         {/* Search, Cart, User */}
         <div className="flex items-center space-x-6">
@@ -286,8 +286,8 @@ return (
                   <div className="flex items-center space-x-3">
                     <img src="https://readdy.ai/api/search-image?query=elegant%20floral%20summer%20dress%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=80&height=80&seq=1&orientation=squarish" alt="Floral Summer Dress" className="w-16 h-16 object-cover rounded" />
                     <div className="flex-1">
-                      <h4 className="text-sm font-medium text-gray-900">Floral Summer Dress</h4>
-                      <p className="text-sm text-gray-500">Size: M | Color: White</p>
+                      <h4 className="text-sm font-medium text-gray-900">Robe d'été fleurie</h4>
+                      <p className="text-sm text-gray-500">Taille: M | Couleur: Blanc</p>
                       <div className="flex items-center justify-between mt-1">
                         <span className="text-sm font-medium text-gray-900">$89.99</span>
                         <span className="text-sm text-gray-500">Qty: 1</span>
@@ -297,8 +297,8 @@ return (
                   <div className="flex items-center space-x-3">
                     <img src="https://readdy.ai/api/search-image?query=casual%20linen%20blouse%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=80&height=80&seq=2&orientation=squarish" alt="Casual Linen Blouse" className="w-16 h-16 object-cover rounded" />
                     <div className="flex-1">
-                      <h4 className="text-sm font-medium text-gray-900">Casual Linen Blouse</h4>
-                      <p className="text-sm text-gray-500">Size: S | Color: Blue</p>
+                      <h4 className="text-sm font-medium text-gray-900">Robe linéenne</h4>
+                      <p className="text-sm text-gray-500">Taille: S | Couleur: Bleu</p>
                       <div className="flex items-center justify-between mt-1">
                         <span className="text-sm font-medium text-gray-900">$49.99</span>
                         <span className="text-sm text-gray-500">Qty: 1</span>
@@ -308,8 +308,8 @@ return (
                   <div className="flex items-center space-x-3">
                     <img src="https://readdy.ai/api/search-image?query=high%20waisted%20jeans%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=80&height=80&seq=3&orientation=squarish" alt="High-Waisted Jeans" className="w-16 h-16 object-cover rounded" />
                     <div className="flex-1">
-                      <h4 className="text-sm font-medium text-gray-900">High-Waisted Jeans</h4>
-                      <p className="text-sm text-gray-500">Size: M | Color: Blue</p>
+                      <h4 className="text-sm font-medium text-gray-900">Jeans à large hanche</h4>
+                      <p className="text-sm text-gray-500">Taille: M | Couleur: Bleu</p>
                       <div className="flex items-center justify-between mt-1">
                         <span className="text-sm font-medium text-gray-900">$79.99</span>
                         <span className="text-sm text-gray-500">Qty: 1</span>
@@ -319,12 +319,12 @@ return (
                 </div>
                 <div className="border-t border-gray-200 mt-4 pt-4">
                   <div className="flex items-center justify-between text-sm font-medium text-gray-900">
-                    <span>Subtotal</span>
+                    <span>Sous-total</span>
                     <span>$219.97</span>
                   </div>
                   <div className="mt-4 space-y-2">
-                    <button className="w-full bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition whitespace-nowrap !rounded-button">View Cart</button>
-                    <button className="w-full bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 transition whitespace-nowrap !rounded-button">Checkout</button>
+                    <button className="w-full bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition whitespace-nowrap !rounded-button">Voir le panier</button>
+                    <button className="w-full bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 transition whitespace-nowrap !rounded-button">Passer à la caisse</button>
                   </div>
                 </div>
               </div>
@@ -347,17 +347,17 @@ return (
           data-readdy="true"
           className="hover:text-pink-600 transition cursor-pointer"
         >
-          Home
+          Accueil
         </a>
         <i className="fas fa-chevron-right text-xs mx-2"></i>
-        <span className="text-gray-700 font-medium">Women</span>
+        <span className="text-gray-700 font-medium">Femmes</span>
       </div>
     </div>
   </div>
   {/* Page Title */}
   <div className="container mx-auto px-4 py-6">
-    <h1 className="text-3xl font-bold text-gray-800">Women's Collection</h1>
-    <p className="text-gray-600 mt-2">Discover our latest women's fashion collection for every occasion.</p>
+    <h1 className="text-3xl font-bold text-gray-800">Collection des femmes</h1>
+    <p className="text-gray-600 mt-2">Découvrez notre dernière collection de vêtements pour femmes pour chaque occasion.</p>
   </div>
   {/* Filters - Desktop */}
   <div className="hidden md:block bg-white border-t border-b border-gray-200">
@@ -371,7 +371,7 @@ return (
               onClick={() => setIsCategoryOpen(!isCategoryOpen)}
               className="flex items-center space-x-2 text-gray-700 hover:text-pink-600 transition cursor-pointer whitespace-nowrap !rounded-button"
             >
-              <span>Category: <span className="font-medium">{categoryFilter}</span></span>
+              <span>Catégorie: <span className="font-medium">{categoryFilter}</span></span>
               <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${isCategoryOpen ? 'transform rotate-180' : ''}`}></i>
             </button>
             <div
@@ -401,7 +401,7 @@ return (
               onClick={() => setIsSizeOpen(!isSizeOpen)}
               className="flex items-center space-x-2 text-gray-700 hover:text-pink-600 transition cursor-pointer whitespace-nowrap !rounded-button"
             >
-              <span>Size: <span className="font-medium">{sizeFilter}</span></span>
+              <span>Taille: <span className="font-medium">{sizeFilter}</span></span>
               <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${isSizeOpen ? 'transform rotate-180' : ''}`}></i>
             </button>
             <div
@@ -431,7 +431,7 @@ return (
               onClick={() => setIsColorOpen(!isColorOpen)}
               className="flex items-center space-x-2 text-gray-700 hover:text-pink-600 transition cursor-pointer whitespace-nowrap !rounded-button"
             >
-              <span>Color: <span className="font-medium">{colorFilter}</span></span>
+              <span>Couleur: <span className="font-medium">{colorFilter}</span></span>
               <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${isColorOpen ? 'transform rotate-180' : ''}`}></i>
             </button>
             <div
@@ -461,7 +461,7 @@ return (
               onClick={() => document.getElementById('priceDropdown')?.classList.toggle('hidden')}
               className="flex items-center space-x-2 text-gray-700 hover:text-pink-600 transition cursor-pointer whitespace-nowrap !rounded-button"
             >
-              <span>Price: <span className="font-medium">${priceRange[0]} - ${priceRange[1]}</span></span>
+              <span>Prix: <span className="font-medium">${priceRange[0]} - ${priceRange[1]}</span></span>
               <i className="fas fa-chevron-down text-xs"></i>
             </button>
             <div id="priceDropdown" className="hidden absolute z-10 mt-2 w-72 bg-white rounded-md shadow-lg p-4">
@@ -494,38 +494,38 @@ return (
                   onClick={() => setPriceRange([0, 50])}
                   className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded whitespace-nowrap !rounded-button"
                 >
-                  Under $50
+                  Moins de 50$
                 </button>
                 <button
                   onClick={() => setPriceRange([50, 100])}
                   className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded whitespace-nowrap !rounded-button"
                 >
-                  $50 - $100
+                  50$ - 100$
                 </button>
                 <button
                   onClick={() => setPriceRange([100, 200])}
                   className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded whitespace-nowrap !rounded-button"
                 >
-                  $100 - $200
+                  100$ - 200$
                 </button>
                 <button
                   onClick={() => setPriceRange([200, 500])}
                   className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded whitespace-nowrap !rounded-button"
                 >
-                  $200 - $500
+                  200$ - 500$
                 </button>
                 <button
                   onClick={() => setPriceRange([500, 1000])}
                   className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded whitespace-nowrap !rounded-button"
                 >
-                  Over $500
+                  Plus de 500$
                 </button>
               </div>
               <button
                 onClick={() => document.getElementById('priceDropdown')?.classList.add('hidden')}
                 className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition whitespace-nowrap !rounded-button"
               >
-                Apply
+                Appliquer
               </button>
             </div>
           </div>
@@ -534,7 +534,7 @@ return (
             onClick={clearAllFilters}
             className="text-pink-600 hover:text-pink-700 transition text-sm cursor-pointer whitespace-nowrap !rounded-button"
           >
-            Clear All
+            Tous les filtres
           </button>
         </div>
         {/* Sort Options */}
@@ -593,7 +593,7 @@ return (
       </div>
       {/* Size Filter */}
       <div>
-        <h3 className="text-sm font-medium text-gray-900 mb-3">Size</h3>
+        <h3 className="text-sm font-medium text-gray-900 mb-3">Taille</h3>
         <div className="space-y-2">
           {sizes.map((size) => (
             <div key={size} className="flex items-center">
@@ -614,7 +614,7 @@ return (
       </div>
       {/* Color Filter */}
       <div>
-        <h3 className="text-sm font-medium text-gray-900 mb-3">Color</h3>
+        <h3 className="text-sm font-medium text-gray-900 mb-3">Couleur</h3>
         <div className="space-y-2">
           {colors.map((color) => (
             <div key={color} className="flex items-center">
@@ -660,7 +660,7 @@ return (
           onClick={clearAllFilters}
           className="w-full bg-pink-600 text-white py-2 px-4 rounded-md hover:bg-pink-700 transition whitespace-nowrap !rounded-button"
         >
-          Clear All Filters
+          Tous les filtres
         </button>
       </div>
     </div>
@@ -703,7 +703,7 @@ return (
                   onClick={() => openQuickView(product)}
                   className="bg-white text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-pink-600 hover:text-white transition transform -translate-y-4 group-hover:translate-y-0 duration-300 whitespace-nowrap !rounded-button"
                 >
-                  Quick View
+                  Voir le produit
                 </button>
               </div>
             </div>
@@ -724,7 +724,7 @@ return (
                 </div>
               </div>
               <button className="mt-3 w-full bg-gray-800 hover:bg-pink-600 text-white py-2 rounded-md transition whitespace-nowrap !rounded-button">
-                Add to Cart
+                Ajouter au panier
               </button>
             </div>
           </div>
@@ -736,13 +736,13 @@ return (
         <div className="text-pink-600 mb-4">
           <i className="fas fa-search text-6xl"></i>
         </div>
-        <h3 className="text-2xl font-medium text-gray-800 mb-2">No products found</h3>
-        <p className="text-gray-600 mb-6">Try removing some filters or changing your search criteria.</p>
+        <h3 className="text-2xl font-medium text-gray-800 mb-2">Aucun produit trouvé</h3>
+        <p className="text-gray-600 mb-6">Essayez de supprimer certains filtres ou de modifier vos critères de recherche.</p>
         <button
           onClick={clearAllFilters}
           className="bg-pink-600 text-white px-6 py-3 rounded-md hover:bg-pink-700 transition whitespace-nowrap !rounded-button"
         >
-          Clear All Filters
+          Tous les filtres
         </button>
       </div>
     )}
@@ -751,7 +751,7 @@ return (
   {filteredProducts.length > 0 && (
     <div className="container mx-auto px-4 pb-16 text-center">
       <button className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-50 transition whitespace-nowrap !rounded-button">
-        Load More
+      Charger plus
       </button>
     </div>
   )}
@@ -791,13 +791,13 @@ return (
                     ></i>
                   ))}
                 </div>
-                <span className="text-gray-500 text-sm ml-1">{selectedProduct.rating} stars</span>
+                <span className="text-gray-500 text-sm ml-1">{selectedProduct.rating} étoiles</span>
               </div>
               <div className="mt-4">
                 <span className="text-2xl font-bold text-gray-900">${selectedProduct.price.toFixed(2)}</span>
               </div>
               <div className="mt-6">
-                <h3 className="text-sm font-medium text-gray-900">Color</h3>
+                <h3 className="text-sm font-medium text-gray-900">Couleur</h3>
                 <div className="flex items-center space-x-3 mt-2">
                   {selectedProduct.colors.map((color: string) => (
                     <button
@@ -828,7 +828,7 @@ return (
                 </div>
               </div>
               <div className="mt-6">
-                <h3 className="text-sm font-medium text-gray-900">Size</h3>
+                <h3 className="text-sm font-medium text-gray-900">Taille</h3>
                 <div className="grid grid-cols-5 gap-2 mt-2">
                   {selectedProduct.sizes.map((size: string) => (
                     <button
@@ -866,18 +866,17 @@ return (
               </div>
               <div className="mt-8 space-y-3">
                 <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-md hover:bg-gray-800 transition whitespace-nowrap !rounded-button">
-                  Add to Cart
+                  Ajouter au panier
                 </button>
                 <button className="w-full bg-pink-600 text-white py-3 px-6 rounded-md hover:bg-pink-700 transition whitespace-nowrap !rounded-button">
-                  Buy Now
+                  Achat immédiat
                 </button>
               </div>
-              <div className="mt-6 border-t border-gray-200 pt-4">
-                <h3 className="text-sm font-medium text-gray-900">Product Details</h3>
+              <div className="mt-6 border-t border-gray-200 pt-4">  
+                <h3 className="text-sm font-medium text-gray-900">Détails du produit</h3>
                 <p className="mt-2 text-sm text-gray-600">
-                  Experience comfort and style with our premium quality {selectedProduct.name.toLowerCase()}.
-                  Perfect for any occasion, this piece combines modern design with exceptional craftsmanship.
-                </p>
+                Découvrez le confort et le style avec notre qualité premium {selectedProduct.name.toLowerCase()}.
+                Parfaite pour toutes les occasions, cette pièce allie un design moderne à un savoir-faire exceptionnel.</p>
               </div>
             </div>
           </div>
@@ -892,7 +891,7 @@ return (
         <div>
           <h3 className="text-lg font-bold mb-4">FASHION<span className="text-pink-500">NOVA</span></h3>
           <p className="text-gray-400 text-sm">
-            Discover the latest trends in women's fashion and explore our collection of high-quality clothing designed for the modern woman.
+            Découvrez les dernières tendances en mode femmes et explorez notre collection de vêtements de haute qualité conçus pour la femme moderne.
           </p>
           <div className="flex space-x-4 mt-6">
             <a className="text-gray-400 hover:text-white transition cursor-pointer">
@@ -910,42 +909,42 @@ return (
           </div>
         </div>
         <div>
-          <h3 className="text-lg font-bold mb-4">Shop</h3>
+          <h3 className="text-lg font-bold mb-4">Magasin</h3>
           <ul className="space-y-2">
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">New Arrivals</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Bestsellers</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Sale</a></li>
+            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Nouveaux arrivages</a></li>
+            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Meilleures ventes</a></li>
+            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Promotions</a></li>
             <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Collections</a></li>
             <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Lookbook</a></li>
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-bold mb-4">Help</h3>
+          <h3 className="text-lg font-bold mb-4">Aide</h3>
           <ul className="space-y-2">
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Customer Service</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Shipping & Returns</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Size Guide</a></li>
+            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Service client</a></li>
+            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Livraison & Retours</a></li>
+            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Guide de taille</a></li>
             <li><a className="text-gray-400 hover:text-white transition cursor-pointer">FAQs</a></li>
             <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Contact Us</a></li>
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-bold mb-4">Subscribe</h3>
+          <h3 className="text-lg font-bold mb-4">Abonnement</h3>
           <p className="text-gray-400 text-sm mb-4">
-            Sign up for our newsletter to receive updates and exclusive offers.
+            Abonnez-vous à notre newsletter pour recevoir des mises à jour et des offres exclusives.
           </p>
           <div className="flex">
             <input
               type="email"
-              placeholder="Your email"
+              placeholder="Votre email"
               className="px-4 py-2 w-full rounded-l-md border-none focus:outline-none text-gray-900 text-sm"
             />
             <button className="bg-pink-600 text-white px-4 py-2 rounded-r-md hover:bg-pink-700 transition whitespace-nowrap !rounded-button">
-              Subscribe
+              Abonnez-vous
             </button>
           </div>
           <div className="mt-6">
-            <h4 className="text-sm font-bold mb-2">Payment Methods</h4>
+            <h4 className="text-sm font-bold mb-2">Méthodes de paiement</h4>
             <div className="flex space-x-3">
               <i className="fab fa-cc-visa text-2xl text-gray-400"></i>
               <i className="fab fa-cc-mastercard text-2xl text-gray-400"></i>
@@ -956,7 +955,7 @@ return (
         </div>
       </div>
       <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 text-sm">
-        <p>&copy; 2025 FashionNova. All rights reserved.</p>
+        <p>&copy; 2025 FashionNova. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

@@ -122,11 +122,11 @@ return (
         <div className="flex items-center space-x-8">
           <Link to="/" className="text-2xl font-bold text-gray-900">LUXE</Link>
           <nav className="hidden md:flex space-x-6">
-            <Link to="/" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Home</Link>
-            <Link to="/women" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Women</Link>
-            <Link to="/men" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Men</Link>
-            <span className="text-gray-900 font-medium whitespace-nowrap !rounded-button cursor-default">Kids</span>
-            <Link to="/accessories" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Accessories</Link>
+            <Link to="/" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Accueil</Link>
+            <Link to="/women" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Femmes</Link>
+            <Link to="/men" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Hommes</Link>
+            <span className="text-gray-900 font-medium whitespace-nowrap !rounded-button cursor-default">Enfants</span>
+            <Link to="/accessories" className="text-gray-600 hover:text-gray-900 whitespace-nowrap !rounded-button">Accessoires</Link>
           </nav>
         </div>
         <div className="flex items-center space-x-6">
@@ -160,25 +160,25 @@ return (
                 className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button"
                 onClick={() => setIsUserMenuOpen(false)}
               >
-                Sign In
+                Se connecter
               </button>
               <button
                 className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button"
                 onClick={() => setIsUserMenuOpen(false)}
               >
-                Register
+                S'inscrire
               </button>
               <button
                 className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button"
                 onClick={() => setIsUserMenuOpen(false)}
               >
-                My Account
+                Mon compte
               </button>
               <button
                 className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button"
                 onClick={() => setIsUserMenuOpen(false)}
               >
-                My Orders
+                Mes commandes
               </button>
               <button
                 className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button"
@@ -191,7 +191,7 @@ return (
                 className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button"
                 onClick={() => setIsUserMenuOpen(false)}
               >
-                Sign Out
+                Se deconnecter
               </button>
             </div>
           </div>
@@ -210,7 +210,7 @@ return (
             className="text-gray-600 hover:text-gray-900 flex items-center space-x-1"
           >
             <i className="fas fa-arrow-left"></i>
-            <span>Back</span>
+            <span>Retour</span>
           </a>
           {ageGroups.map((age) => (
             <button
@@ -232,7 +232,7 @@ return (
           className="text-gray-700 hover:text-gray-900 flex items-center space-x-2 cursor-pointer whitespace-nowrap !rounded-button"
         >
           <i className="fas fa-ruler"></i>
-          <span>Size Chart</span>
+          <span>Grille de Taille</span>
         </button>
       </div>
     </div>
@@ -264,7 +264,7 @@ return (
       <div className="flex items-center space-x-8">
         <div className="relative group">
           <button className="flex items-center space-x-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button">
-            <span>Size</span>
+            <span>Taille</span>
             <i className="fas fa-chevron-down text-xs"></i>
           </button>
           <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg p-4 hidden group-hover:block">
@@ -294,7 +294,7 @@ return (
             }}
             className="flex items-center space-x-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button"
           >
-            <span>{selectedColor ? `Color: ${selectedColor}` : 'Color'}</span>
+            <span>{selectedColor ? `Couleur: ${selectedColor}` : 'Couleur'}</span>
             <i className="fas fa-chevron-down text-xs"></i>
           </button>
           <div
@@ -324,7 +324,7 @@ return (
         </div>
         <div className="relative group">
           <button className="flex items-center space-x-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button">
-            <span>Price</span>
+            <span>Prix</span>
             <i className="fas fa-chevron-down text-xs"></i>
           </button>
           <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg p-4 hidden group-hover:block w-64">
@@ -347,10 +347,10 @@ return (
         </div>
       </div>
       <div className="flex items-center space-x-4">
-        <span className="text-gray-600">{products.length} Products</span>
+        <span className="text-gray-600">{products.length} Produits</span>
         <div className="relative group">
           <button className="flex items-center space-x-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button">
-            <span>Sort by: {sortBy}</span>
+            <span>Trier par: {sortBy}</span>
             <i className="fas fa-chevron-down text-xs"></i>
           </button>
           <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block w-48">
@@ -358,19 +358,19 @@ return (
               onClick={() => setSortBy('newest')}
               className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button"
             >
-              Newest
+              Plus récent
             </button>
             <button
               onClick={() => setSortBy('price-high')}
               className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button"
             >
-              Price: High to Low
+              Prix: Haut à Bas
             </button>
             <button
               onClick={() => setSortBy('price-low')}
               className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button"
             >
-              Price: Low to High
+              Prix: Bas à Haut
             </button>
           </div>
         </div>
@@ -403,7 +403,7 @@ return (
                     }}
                     className="bg-white text-gray-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
-                    Quick View
+                    Aperçu rapide
                   </button>
                   <button
                     onClick={() => {
@@ -442,7 +442,7 @@ return (
                     }}
                     className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button"
                   >
-                    Add to Cart
+                    Ajouter au panier
                   </button>
                 </div>
               </div>
@@ -469,19 +469,19 @@ return (
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">About LUXE Kids</h3>
-            <p className="text-gray-400">Discover luxury fashion for your little ones.</p>
+            <h3 className="text-lg font-bold mb-4">A propos de LUXE Kids</h3>
+            <p className="text-gray-400">Découvrez la mode de luxe pour vos petits-enfants.</p>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4">Customer Service</h3>
+            <h3 className="text-lg font-bold mb-4">Service Client</h3>
             <ul className="space-y-2">
-              <li><button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">Size Guide</button></li>
-              <li><button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">Shipping</button></li>
-              <li><button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">Returns</button></li>
+              <li><button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">Grille de Taille</button></li>
+              <li><button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">Livraison</button></li>
+              <li><button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">Retours</button></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4">Follow Us</h3>
+            <h3 className="text-lg font-bold mb-4">Suivez-nous</h3>
             <div className="flex space-x-4">
               <button className="text-gray-400 hover:text-white cursor-pointer whitespace-nowrap !rounded-button">
                 <i className="fab fa-instagram text-xl"></i>
@@ -503,13 +503,13 @@ return (
                 className="flex-1 px-4 py-2 rounded-l-full text-gray-900 border-none"
               />
               <button className="bg-white text-gray-900 px-6 py-2 rounded-r-full font-medium hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button">
-                Subscribe
+                S'abonner
               </button>
             </div>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 LUXE Kids. All rights reserved.</p>
+          <p>&copy; 2025 LUXE Kids. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
@@ -518,7 +518,7 @@ return (
       <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
         <div className="bg-white rounded-lg max-w-2xl w-full mx-4 p-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-bold">Kids Size Chart</h2>
+            <h2 className="text-xl font-bold">Grille de Taille pour les Enfants</h2>
             <button
               onClick={() => setShowSizeChart(false)}
               className="text-gray-500 hover:text-gray-700 cursor-pointer whitespace-nowrap !rounded-button"
@@ -531,9 +531,9 @@ return (
               <thead>
                 <tr className="bg-gray-100">
                   <th className="px-4 py-2 text-left">Age</th>
-                  <th className="px-4 py-2 text-left">Height (cm)</th>
-                  <th className="px-4 py-2 text-left">Chest (cm)</th>
-                  <th className="px-4 py-2 text-left">Waist (cm)</th>
+                  <th className="px-4 py-2 text-left">Hauteur (cm)</th>
+                  <th className="px-4 py-2 text-left">Cuisse (cm)</th>
+                  <th className="px-4 py-2 text-left">Taille (cm)</th>
                 </tr>
               </thead>
               <tbody>
@@ -606,7 +606,7 @@ return (
                 </p>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-900 mb-3">Size</h3>
+                <h3 className="text-sm font-medium text-gray-900 mb-3">Taille</h3>
                 <div className="grid grid-cols-4 gap-2">
                   {sizes.map((size) => (
                     <button
@@ -624,7 +624,7 @@ return (
                 </div>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-900 mb-3">Color</h3>
+                <h3 className="text-sm font-medium text-gray-900 mb-3">Couleur</h3>
                 <div className="flex space-x-2">
                   {products.find(p => p.id === showQuickView)?.colors.map((color, index) => {
                     const colorName = colors.find(c => c.code === color)?.name || '';
@@ -655,7 +655,7 @@ return (
                 </div>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-900 mb-3">Quantity</h3>
+                <h3 className="text-sm font-medium text-gray-900 mb-3">Quantité</h3>
                 <div className="flex items-center space-x-4">
                   <button
                     onClick={() => setQuickViewQuantity(prev => Math.max(1, prev - 1))}
@@ -709,10 +709,10 @@ return (
                   }`}
                   disabled={!selectedQuickViewSize || !selectedQuickViewColor}
                 >
-                  {selectedQuickViewSize && selectedQuickViewColor ? 'Add to Cart' : 'Select Size & Color'}
+                  {selectedQuickViewSize && selectedQuickViewColor ? 'Ajouter au panier' : 'Select Size & Color'}
                 </button>
                 <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/512f27b1-544c-48e6-ba81-5576ca904569" data-readdy="true" className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium border border-gray-300 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button inline-block text-center">
-                  View Full Details
+                  Voir les détails
                 </a>
               </div>
             </div>

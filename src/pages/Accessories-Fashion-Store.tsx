@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Boucle from '../assets/images/accessoires/boucle.webp';
+import Necklace from '../assets/images/accessoires/Silk Scarf.jpg';
+import Scarf from '../assets/images/accessoires/tote.webp';
+import Watch from '../assets/images/accessoires/Classic Wrist Watch.jpg';
+import Hero from '../assets/images/accessoires/hero.webp';
 
 
 const AccessoriesFashionStore: React.FC = () => {
@@ -9,51 +14,123 @@ const AccessoriesFashionStore: React.FC = () => {
   const [products] = useState([
     {
       id: 1,
-      name: "Luxury Leather Bag",
+      name: "Boucle d'oreille",
       price: 249.99,
       rating: 4.7,
-      image: "https://readdy.ai/api/search-image?query=luxury%20leather%20bag%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Boucle,
       colors: ["Black", "Brown", "Beige"],
       sizes: [],
-      category: "Bags",
+      category: "Accessoires",
       isNew: true,
       isBestseller: true
     },
     {
       id: 2,
-      name: "Elegant Gold Necklace",
+      name: "Anneau d'oreille",
       price: 199.99,
       rating: 4.9,
-      image: "https://readdy.ai/api/search-image?query=elegant%20gold%20necklace%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Hero,
       colors: ["Gold"],
       sizes: [],
-      category: "Jewelry",
+      category: "Accessoires",
       isNew: true,
       isBestseller: false
     },
     {
       id: 3,
-      name: "Classic Wrist Watch",
+      name: "Montre",
       price: 349.99,
       rating: 4.8,
-      image: "https://readdy.ai/api/search-image?query=classic%20wrist%20watch%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Watch,
       colors: ["Black", "Silver"],
       sizes: [],
-      category: "Watches",
+      category: "Accessoires",
       isNew: false,
       isBestseller: true
     },
     {
       id: 4,
-      name: "Silk Scarf",
+      name: "Sac à main",
       price: 79.99,
       rating: 4.5,
-      image: "https://readdy.ai/api/search-image?query=silk%20scarf%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Necklace,
       colors: ["Red", "Blue", "Pink"],
       sizes: [],
-      category: "Scarves",
+      category: "Accessoires",
       isNew: false,
       isBestseller: false
+    },
+    {
+      id: 5,
+      name: "Sac à main",
+      price: 79.99,
+      rating: 4.5,
+      image: Scarf,
+      colors: ["Red", "Blue", "Pink"],
+      sizes: [],
+      category: "Accessoires",
+      isNew: false,
+      isBestseller: false
+    },
+    {
+      id: 6,
+      name: "Sac à main",
+      price: 79.99,
+      rating: 4.5,
+      image: Scarf,
+      colors: ["Red", "Blue", "Pink"],
+      sizes: [],
+      category: "Accessoires",
+      isNew: false,
+      isBestseller: false
+    },
+    {
+      id: 7,
+      name: "Sac à main",
+      price: 79.99,
+      rating: 4.5,
+      image: Scarf,
+      colors: ["Red", "Blue", "Pink"],
+      sizes: [],
+      category: "Accessoires",
+      isNew: false,
+      isBestseller: false
+    },
+    {
+      id: 8,
+      name: "Sac à main",
+      price: 79.99,
+      rating: 4.5,
+      image: Scarf,
+      colors: ["Red", "Blue", "Pink"],
+      sizes: [],
+      category: "Accessoires",
+      isNew: false,
+      isBestseller: false 
+    },
+    {
+      id: 9,
+      name: "Sac à main",
+      price: 79.99,
+      rating: 4.5,
+      image: Scarf,
+      colors: ["Red", "Blue", "Pink"],
+      sizes: [],
+      category: "Accessoires",
+      isNew: false,
+      isBestseller: false 
+    },
+    {
+      id: 10,
+      name: "Sac à main",
+      price: 79.99,
+      rating: 4.5,
+      image: Scarf,
+      colors: ["Red", "Blue", "Pink"],
+      sizes: [],
+      category: "Accessoires",
+      isNew: false,
+      isBestseller: false 
     }
   ]);
 
@@ -69,7 +146,7 @@ const AccessoriesFashionStore: React.FC = () => {
   const [selectedColor, setSelectedColor] = useState("");
 
   // Available filters
-  const categories = ["All", "Bags", "Jewelry", "Watches", "Scarves"];
+  const categories = ["All", "Accessoires"];
   const colors = ["All", "Black", "Brown", "Beige", "Gold", "Silver", "Red", "Blue", "Pink"];
   const sortOptions = ["Newest", "Price High-Low", "Price Low-High", "Bestselling"];
 
@@ -151,11 +228,11 @@ const AccessoriesFashionStore: React.FC = () => {
             FASHION<span className="text-pink-600">NOVA</span>
           </a>
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Home</Link>
-            <Link to="/women" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Women</Link>
-            <Link to="/men" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Men</Link>
-            <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Kids</Link>
-            <span className="text-pink-600 font-medium whitespace-nowrap rounded-button cursor-default">Accessories</span>
+            <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Accueil</Link>
+            <Link to="/women" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Femmes</Link>
+            <Link to="/men" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Hommes</Link>
+            <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Enfants</Link>
+            <span className="text-pink-600 font-medium whitespace-nowrap rounded-button cursor-default">Accessoires</span>
           </nav>
           <div className="flex items-center space-x-6">
             <div className="relative">
@@ -194,8 +271,8 @@ const AccessoriesFashionStore: React.FC = () => {
                       <span>${products[0].price.toFixed(2)}</span>
                     </div>
                     <div className="mt-4 space-y-2">
-                      <button className="w-full bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition rounded-button">View Cart</button>
-                      <button className="w-full bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 transition rounded-button">Checkout</button>
+                      <button className="w-full bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition rounded-button">Voir le panier</button>
+                      <button className="w-full bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 transition rounded-button">Vérifier</button>
                     </div>
                   </div>
                 </div>
@@ -207,11 +284,11 @@ const AccessoriesFashionStore: React.FC = () => {
       </header>
 
       {/* Category Banner */}
-      <section className="relative bg-cover bg-center h-64" style={{ backgroundImage: "url('https://readdy.ai/api/search-image?query=luxury%20accessories%20lifestyle%20image&width=1200&height=400')" }}>
+      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_2/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/95000-1336_01.png')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white px-4">
-          <h2 className="text-4xl font-bold mb-2">Accessories Collection</h2>
-          <p className="mb-4 max-w-xl">Explore our exclusive collection of luxury accessories including bags, jewelry, watches, and more.</p>
-          <button onClick={() => navigate('/accessories')} className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-6 rounded transition rounded-button">Shop Now</button>
+          <h2 className="text-4xl font-bold mb-2">Collection d'accessoires</h2>
+          <p className="mb-4 max-w-xl">Explore notre collection exclusive d'accessoires de luxe, y compris des sacs, des bijoux, des montres et plus encore.</p>
+          <button onClick={() => navigate('/accessories')} className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-6 rounded transition rounded-button">Voir maintenant</button>
         </div>
       </section>
 
@@ -263,17 +340,17 @@ const AccessoriesFashionStore: React.FC = () => {
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   {product.isNew && (
-                    <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                    <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded">Nouveau</span>
                   )}
                   {product.isBestseller && (
-                    <span className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
+                    <span className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">Meilleure vente</span>
                   )}
                   <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <button
                       onClick={() => openQuickView(product)}
                       className="bg-white text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-pink-600 hover:text-white transition transform -translate-y-4 group-hover:translate-y-0 duration-300 whitespace-nowrap rounded-button"
                     >
-                      Quick View
+                      Vue rapide
                     </button>
                   </div>
                 </div>
@@ -294,7 +371,7 @@ const AccessoriesFashionStore: React.FC = () => {
                     </div>
                   </div>
                   <button className="mt-3 w-full bg-gray-800 hover:bg-pink-600 text-white py-2 rounded-md transition whitespace-nowrap rounded-button">
-                    Add to Cart
+                    Ajouter au panier
                   </button>
                 </div>
               </div>
@@ -305,13 +382,13 @@ const AccessoriesFashionStore: React.FC = () => {
             <div className="text-pink-600 mb-4">
               <i className="fas fa-search text-6xl"></i>
             </div>
-            <h3 className="text-2xl font-medium text-gray-800 mb-2">No products found</h3>
-            <p className="text-gray-600 mb-6">Try removing some filters or changing your search criteria.</p>
+            <h3 className="text-2xl font-medium text-gray-800 mb-2">Aucun produit trouvé</h3>
+            <p className="text-gray-600 mb-6">Essayez de supprimer certains filtres ou de modifier vos critères de recherche.</p>
             <button
               onClick={clearAllFilters}
               className="bg-pink-600 text-white px-6 py-3 rounded-md hover:bg-pink-700 transition whitespace-nowrap rounded-button"
             >
-              Clear All Filters
+              Tous les filtres
             </button>
           </div>
         )}
@@ -330,7 +407,7 @@ const AccessoriesFashionStore: React.FC = () => {
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none"
                   onClick={closeQuickView}
                 >
-                  <span className="sr-only">Close</span>
+                  <span className="sr-only">Fermer</span>
                   <i className="fas fa-times text-xl"></i>
                 </button>
               </div>
@@ -353,7 +430,7 @@ const AccessoriesFashionStore: React.FC = () => {
                         ></i>
                       ))}
                     </div>
-                    <span className="text-gray-500 text-sm ml-1">{selectedProduct.rating} stars</span>
+                    <span className="text-gray-500 text-sm ml-1">{selectedProduct.rating} étoiles</span>
                   </div>
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-gray-900">${selectedProduct.price.toFixed(2)}</span>
@@ -391,10 +468,10 @@ const AccessoriesFashionStore: React.FC = () => {
                   </div>
                   <div className="mt-8 space-y-3">
                     <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-md hover:bg-gray-800 transition rounded-button">
-                      Add to Cart
+                      Ajouter au panier
                     </button>
                     <button className="w-full bg-pink-600 text-white py-3 px-6 rounded-md hover:bg-pink-700 transition rounded-button">
-                      Buy Now
+                      Achat immédiat
                     </button>
                   </div>
                 </div>
@@ -422,7 +499,7 @@ const AccessoriesFashionStore: React.FC = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">FASHION<span className="text-pink-500">NOVA</span></h3>
               <p className="text-gray-400 text-sm">
-                Discover the latest trends in luxury accessories and explore our exclusive collection.
+                Découvrez les dernières tendances en accessoires de luxe et explorez notre collection exclusive.
               </p>
               <div className="flex space-x-4 mt-6">
                 <a className="text-gray-400 hover:text-white transition cursor-pointer">
@@ -440,42 +517,42 @@ const AccessoriesFashionStore: React.FC = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Shop</h3>
+              <h3 className="text-lg font-bold mb-4">Magasin</h3>
               <ul className="space-y-2">
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">New Arrivals</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Bestsellers</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Sale</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Nouveaux arrivages</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Meilleures ventes</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Promotions</a></li>
                 <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Collections</a></li>
                 <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Lookbook</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Help</h3>
+              <h3 className="text-lg font-bold mb-4">Aide</h3>
               <ul className="space-y-2">
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Customer Service</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Shipping & Returns</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Size Guide</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Service client</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Livraison & Retours</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Guide de taille</a></li>
                 <li><a className="text-gray-400 hover:text-white transition cursor-pointer">FAQs</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Contact Us</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Contactez-nous</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Subscribe</h3>
+              <h3 className="text-lg font-bold mb-4">Souscrire</h3>
               <p className="text-gray-400 text-sm mb-4">
-                Sign up for our newsletter to receive updates and exclusive offers.
+                Abonnez-vous à notre newsletter pour recevoir des mises à jour et des offres exclusives.
               </p>
               <div className="flex">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Votre email"
                   className="px-4 py-2 w-full rounded-l-md border-none focus:outline-none text-gray-900 text-sm"
                 />
                 <button className="bg-pink-600 text-white px-4 py-2 rounded-r-md hover:bg-pink-700 transition rounded-button">
-                  Subscribe
+                  S'abonner
                 </button>
               </div>
               <div className="mt-6">
-                <h4 className="text-sm font-bold mb-2">Payment Methods</h4>
+                <h4 className="text-sm font-bold mb-2">Méthodes de paiement</h4>
                 <div className="flex space-x-3">
                   <i className="fab fa-cc-visa text-2xl text-gray-400"></i>
                   <i className="fab fa-cc-mastercard text-2xl text-gray-400"></i>
@@ -486,7 +563,7 @@ const AccessoriesFashionStore: React.FC = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 text-sm">
-            <p>&copy; 2025 FashionNova. All rights reserved.</p>
+            <p>&copy; 2025 FashionNova. Tous droits réservés.</p>
           </div>
         </div>
       </footer>

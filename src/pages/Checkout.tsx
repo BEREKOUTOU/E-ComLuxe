@@ -89,7 +89,7 @@ const App: React.FC = () => {
                 <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center">
                   <i className="fas fa-credit-card text-sm"></i>
                 </div>
-                <span className="text-xs mt-1 font-medium">Checkout</span>
+                <span className="text-xs mt-1 font-medium">Vérifier</span>
               </div>
               <div className="w-12 h-1 bg-gray-300 mx-1"></div>
               <div className="flex flex-col items-center">
@@ -120,7 +120,7 @@ const App: React.FC = () => {
                   <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center mr-3">
                     <span className="text-sm font-medium">1</span>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">Shipping Address</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Adresse de livraison</h3>
                 </div>
                 <i className={`fas ${shippingExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-gray-500`}></i>
               </div>
@@ -129,7 +129,7 @@ const App: React.FC = () => {
                 <div className="px-6 py-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="md:col-span-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Adresse Email</label>
                       <input 
                         type="email" 
                         id="email" 
@@ -139,7 +139,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">Nom</label>
                       <input 
                         type="text" 
                         id="firstName" 
@@ -148,7 +148,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Nom de famille</label>
                       <input 
                         type="text" 
                         id="lastName" 
@@ -157,7 +157,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div className="md:col-span-2">
-                      <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">Street Address</label>
+                      <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">Adresse</label>
                       <input 
                         type="text" 
                         id="address" 
@@ -166,7 +166,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">City</label>
+                      <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">Ville</label>
                       <input 
                         type="text" 
                         id="city" 
@@ -175,7 +175,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">State</label>
+                      <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">Département</label>
                       <div className="relative">
                         <select 
                           id="state" 
@@ -196,7 +196,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="zip" className="block text-sm font-medium text-gray-700 mb-1">ZIP Code</label>
+                      <label htmlFor="zip" className="block text-sm font-medium text-gray-700 mb-1">Code Postal</label>
                       <input 
                         type="text" 
                         id="zip" 
@@ -205,7 +205,7 @@ const App: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Numéro de téléphone</label>
                       <input 
                         type="tel" 
                         id="phone" 
@@ -252,7 +252,7 @@ const App: React.FC = () => {
                   <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center mr-3">
                     <span className="text-sm font-medium">2</span>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">Shipping Method</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Méthode de livraison</h3>
                 </div>
                 <i className={`fas ${shippingMethodExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-gray-500`}></i>
               </div>
@@ -271,10 +271,10 @@ const App: React.FC = () => {
                       />
                       <div className="ml-3 flex-1">
                         <div className="flex justify-between">
-                          <span className="text-sm font-medium text-gray-900">Standard Shipping</span>
+                          <span className="text-sm font-medium text-gray-900">Livraison standard</span>
                           <span className="text-sm font-medium text-gray-900">$5.99</span>
                         </div>
-                        <p className="text-sm text-gray-500">Delivery in 5-7 business days</p>
+                        <p className="text-sm text-gray-500">Livraison en 5-7 jours ouvrables</p>
                       </div>
                     </label>
                     
@@ -289,10 +289,10 @@ const App: React.FC = () => {
                       />
                       <div className="ml-3 flex-1">
                         <div className="flex justify-between">
-                          <span className="text-sm font-medium text-gray-900">Express Shipping</span>
+                          <span className="text-sm font-medium text-gray-900">Livraison express</span>
                           <span className="text-sm font-medium text-gray-900">$12.99</span>
                         </div>
-                        <p className="text-sm text-gray-500">Delivery in 2-3 business days</p>
+                        <p className="text-sm text-gray-500">Livraison en 2-3 jours ouvrables</p>
                       </div>
                     </label>
                     
@@ -307,10 +307,10 @@ const App: React.FC = () => {
                       />
                       <div className="ml-3 flex-1">
                         <div className="flex justify-between">
-                          <span className="text-sm font-medium text-gray-900">Next Day Delivery</span>
+                          <span className="text-sm font-medium text-gray-900">Livraison le lendemain</span>
                           <span className="text-sm font-medium text-gray-900">$24.99</span>
                         </div>
-                        <p className="text-sm text-gray-500">Order before 2pm for next business day delivery</p>
+                        <p className="text-sm text-gray-500">Commandez avant 14h pour une livraison le lendemain</p>
                       </div>
                     </label>
                   </div>
@@ -324,7 +324,7 @@ const App: React.FC = () => {
                         setPaymentExpanded(true);
                       }}
                     >
-                      Continue to Payment
+                      Continuer au paiement
                     </button>
                   </div>
                 </div>
@@ -341,7 +341,7 @@ const App: React.FC = () => {
                   <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center mr-3">
                     <span className="text-sm font-medium">3</span>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">Payment Information</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Informations de paiement</h3>
                 </div>
                 <i className={`fas ${paymentExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-gray-500`}></i>
               </div>
@@ -350,7 +350,7 @@ const App: React.FC = () => {
                 <div className="px-6 py-4">
                   <div className="mb-6">
                     <div className="flex items-center mb-4">
-                      <h4 className="text-sm font-medium text-gray-900">Payment Method</h4>
+                      <h4 className="text-sm font-medium text-gray-900">Méthode de paiement</h4>
                       <div className="ml-auto flex items-center space-x-2">
                         <i className="fab fa-cc-visa text-2xl text-blue-700"></i>
                         <i className="fab fa-cc-mastercard text-2xl text-red-500"></i>
@@ -361,7 +361,7 @@ const App: React.FC = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="md:col-span-2">
-                        <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+                        <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700 mb-1">Numéro de carte</label>
                         <div className="relative">
                           <input 
                             type="text" 
@@ -376,7 +376,7 @@ const App: React.FC = () => {
                       </div>
                       
                       <div>
-                        <label htmlFor="cardName" className="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
+                        <label htmlFor="cardName" className="block text-sm font-medium text-gray-700 mb-1">Nom sur la carte</label>
                         <input 
                           type="text" 
                           id="cardName" 
@@ -386,7 +386,7 @@ const App: React.FC = () => {
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <label htmlFor="expDate" className="block text-sm font-medium text-gray-700 mb-1">Expiration Date</label>
+                          <label htmlFor="expDate" className="block text-sm font-medium text-gray-700 mb-1">Date d'expiration</label>
                           <input 
                             type="text" 
                             id="expDate" 
@@ -421,13 +421,13 @@ const App: React.FC = () => {
                         checked={sameAsBilling}
                         onChange={() => setSameAsBilling(!sameAsBilling)}
                       />
-                      <span className="ml-2 text-sm text-gray-600">Billing address is the same as shipping address</span>
+                      <span className="ml-2 text-sm text-gray-600">Adresse de facturation est la même que l'adresse de livraison</span>
                     </label>
                     
                     {!sameAsBilling && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <div className="md:col-span-2">
-                          <label htmlFor="billingAddress" className="block text-sm font-medium text-gray-700 mb-1">Street Address</label>
+                          <label htmlFor="billingAddress" className="block text-sm font-medium text-gray-700 mb-1">Adresse de facturation</label>
                           <input 
                             type="text" 
                             id="billingAddress" 
@@ -436,7 +436,7 @@ const App: React.FC = () => {
                         </div>
                         
                         <div>
-                          <label htmlFor="billingCity" className="block text-sm font-medium text-gray-700 mb-1">City</label>
+                          <label htmlFor="billingCity" className="block text-sm font-medium text-gray-700 mb-1">Ville</label>
                           <input 
                             type="text" 
                             id="billingCity" 
@@ -445,13 +445,13 @@ const App: React.FC = () => {
                         </div>
                         
                         <div>
-                          <label htmlFor="billingState" className="block text-sm font-medium text-gray-700 mb-1">State</label>
+                          <label htmlFor="billingState" className="block text-sm font-medium text-gray-700 mb-1">Département</label>
                           <div className="relative">
                             <select 
                               id="billingState" 
                               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
                             >
-                              <option value="">Select State</option>
+                              <option value="">Département</option>
                               <option value="AL">Alabama</option>
                               <option value="AK">Alaska</option>
                               <option value="AZ">Arizona</option>
@@ -466,7 +466,7 @@ const App: React.FC = () => {
                         </div>
                         
                         <div>
-                          <label htmlFor="billingZip" className="block text-sm font-medium text-gray-700 mb-1">ZIP Code</label>
+                          <label htmlFor="billingZip" className="block text-sm font-medium text-gray-700 mb-1">Code postal</label>
                           <input 
                             type="text" 
                             id="billingZip" 
@@ -480,7 +480,7 @@ const App: React.FC = () => {
                   <div className="mt-6 flex items-center justify-between">
                     <div className="flex items-center">
                       <i className="fas fa-lock text-green-600 mr-2"></i>
-                      <span className="text-sm text-gray-600">Secure payment processing</span>
+                      <span className="text-sm text-gray-600">Traitement sécurisé des paiements</span>
                     </div>
                   </div>
                 </div>
@@ -492,7 +492,7 @@ const App: React.FC = () => {
           <div className="lg:w-1/3">
             <div className="bg-white rounded-lg shadow-sm overflow-hidden sticky top-6">
               <div className="px-6 py-4 border-b">
-                <h3 className="text-lg font-medium text-gray-900">Order Summary</h3>
+                <h3 className="text-lg font-medium text-gray-900">Résumé de la commande</h3>
               </div>
               
               <div className="px-6 py-4">
@@ -519,15 +519,15 @@ const App: React.FC = () => {
                 
                 <div className="mt-6 border-t pt-4">
                   <div className="flex justify-between py-2">
-                    <span className="text-sm text-gray-600">Subtotal</span>
+                    <span className="text-sm text-gray-600">Sous-total</span>
                     <span className="text-sm font-medium text-gray-900">${subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between py-2">
-                    <span className="text-sm text-gray-600">Shipping</span>
+                    <span className="text-sm text-gray-600">Livraison</span>
                     <span className="text-sm font-medium text-gray-900">${shipping.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between py-2">
-                    <span className="text-sm text-gray-600">Tax (8%)</span>
+                    <span className="text-sm text-gray-600">Taxe (8%)</span>
                     <span className="text-sm font-medium text-gray-900">${tax.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between py-3 border-t border-b">
@@ -541,10 +541,10 @@ const App: React.FC = () => {
                     type="button" 
                     className="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 !rounded-button whitespace-nowrap cursor-pointer"
                   >
-                    Place Order
+                    Passer à la caisse
                   </button>
                   <p className="text-xs text-center text-gray-500 mt-4">
-                    By placing your order, you agree to our <a href="#" className="text-indigo-600 hover:text-indigo-500">Terms of Service</a> and <a href="#" className="text-indigo-600 hover:text-indigo-500">Privacy Policy</a>.
+                    En passant votre commande, vous acceptez nos <a href="#" className="text-indigo-600 hover:text-indigo-500">Conditions d'utilisation</a> et <a href="#" className="text-indigo-600 hover:text-indigo-500">Politique de confidentialité</a>.
                   </p>
                 </div>
                 
@@ -567,7 +567,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <h2 className="text-xl font-bold tracking-wider text-gray-900">LUXE</h2>
-              <p className="text-sm text-gray-600 mt-1">© 2025 LUXE. All rights reserved.</p>
+              <p className="text-sm text-gray-600 mt-1">© 2025 LUXE. Tous droits réservés.</p>
             </div>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-600 hover:text-gray-900">
@@ -586,12 +586,12 @@ const App: React.FC = () => {
           </div>
           <div className="mt-8 border-t pt-8">
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-              <a href="#" className="hover:text-gray-900">Terms of Service</a>
-              <a href="#" className="hover:text-gray-900">Privacy Policy</a>
-              <a href="#" className="hover:text-gray-900">Shipping Policy</a>
-              <a href="#" className="hover:text-gray-900">Returns & Refunds</a>
+              <a href="#" className="hover:text-gray-900">Conditions d'utilisation</a>
+              <a href="#" className="hover:text-gray-900">Politique de confidentialité</a>
+              <a href="#" className="hover:text-gray-900">Politique de livraison</a>
+              <a href="#" className="hover:text-gray-900">Retours & Remboursements</a>
               <a href="#" className="hover:text-gray-900">FAQ</a>
-              <a href="#" className="hover:text-gray-900">Contact Us</a>
+              <a href="#" className="hover:text-gray-900">Contactez-nous</a>
             </div>
           </div>
         </div>

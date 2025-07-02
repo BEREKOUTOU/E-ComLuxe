@@ -183,11 +183,11 @@ const MensFashionStore: React.FC = () => {
             LUXE
           </a>
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Home</Link>
-            <Link to="/women" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Women</Link>
-            <span className="text-pink-600 font-medium whitespace-nowrap rounded-button cursor-default">Men</span>
-            <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Kids</Link>
-            <Link to="/accessories" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Accessories</Link>
+            <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Accueil</Link>
+            <Link to="/women" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Femmes</Link>
+            <span className="text-pink-600 font-medium whitespace-nowrap rounded-button cursor-default">Hommes</span>
+            <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Enfants</Link>
+            <Link to="/accessories" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Accessoires</Link>
           </nav>
           <div className="flex items-center space-x-6">
             <div className="relative">
@@ -242,17 +242,17 @@ const MensFashionStore: React.FC = () => {
       <nav className="bg-gray-100 py-3 px-4 text-sm" aria-label="Breadcrumb">
         <ol className="list-reset flex text-gray-600">
           <li>
-            <Link to="/" className="hover:text-pink-600">Home</Link>
+            <Link to="/" className="hover:text-pink-600">Accueil</Link>
             <span className="mx-2">/</span>
           </li>
-          <li className="text-pink-600 font-medium" aria-current="page">Men</li>
+          <li className="text-pink-600 font-medium" aria-current="page">Hommes</li>
         </ol>
       </nav>
 
       {/* Filter Section */}
       <section className="bg-white border-b border-gray-200 py-4 sticky top-20 z-20">
         <div className="container mx-auto px-4 flex flex-wrap items-center justify-between space-y-2 md:space-y-0">
-          <button onClick={() => navigate(-1)} className="text-pink-600 hover:text-pink-700 font-medium whitespace-nowrap rounded-button">← Back</button>
+          <button onClick={() => navigate(-1)} className="text-pink-600 hover:text-pink-700 font-medium whitespace-nowrap rounded-button">← Retour</button>
           <div className="flex flex-wrap space-x-4 items-center">
             {/* Category Dropdown */}
             <select value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)} className="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500">
@@ -290,7 +290,7 @@ const MensFashionStore: React.FC = () => {
             <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} className="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500">
               {sortOptions.map(option => <option key={option} value={option}>{option}</option>)}
             </select>
-            <button onClick={clearAllFilters} className="text-pink-600 hover:text-pink-700 font-medium rounded-button">Clear All</button>
+            <button onClick={clearAllFilters} className="text-pink-600 hover:text-pink-700 font-medium rounded-button">Tout effacer</button>
           </div>
         </div>
       </section>
@@ -321,17 +321,17 @@ const MensFashionStore: React.FC = () => {
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   {product.isNew && (
-                    <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                    <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded">Nouveau</span>
                   )}
                   {product.isBestseller && (
-                    <span className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
+                    <span className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">Meilleure vente</span>
                   )}
                   <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <button
                       onClick={() => openQuickView(product)}
                       className="bg-white text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-pink-600 hover:text-white transition transform -translate-y-4 group-hover:translate-y-0 duration-300 whitespace-nowrap rounded-button"
                     >
-                      Quick View
+                      Voir le produit
                     </button>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ const MensFashionStore: React.FC = () => {
                     </div>
                   </div>
                   <button className="mt-3 w-full bg-gray-800 hover:bg-pink-600 text-white py-2 rounded-md transition whitespace-nowrap rounded-button">
-                    Add to Cart
+                    Ajouter au panier
                   </button>
                 </div>
               </div>
@@ -363,13 +363,13 @@ const MensFashionStore: React.FC = () => {
             <div className="text-pink-600 mb-4">
               <i className="fas fa-search text-6xl"></i>
             </div>
-            <h3 className="text-2xl font-medium text-gray-800 mb-2">No products found</h3>
-            <p className="text-gray-600 mb-6">Try removing some filters or changing your search criteria.</p>
+            <h3 className="text-2xl font-medium text-gray-800 mb-2">Aucun produit trouvé</h3>
+            <p className="text-gray-600 mb-6">Essayez de supprimer certains filtres ou de changer vos critères de recherche.</p>
             <button
               onClick={clearAllFilters}
               className="bg-pink-600 text-white px-6 py-3 rounded-md hover:bg-pink-700 transition whitespace-nowrap rounded-button"
             >
-              Clear All Filters
+              Tout effacer
             </button>
           </div>
         )}
@@ -388,7 +388,7 @@ const MensFashionStore: React.FC = () => {
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none"
                   onClick={closeQuickView}
                 >
-                  <span className="sr-only">Close</span>
+                  <span className="sr-only">Fermer</span>
                   <i className="fas fa-times text-xl"></i>
                 </button>
               </div>
@@ -411,7 +411,7 @@ const MensFashionStore: React.FC = () => {
                         ></i>
                       ))}
                     </div>
-                    <span className="text-gray-500 text-sm ml-1">{selectedProduct.rating} stars</span>
+                    <span className="text-gray-500 text-sm ml-1">{selectedProduct.rating} étoiles</span>
                   </div>
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-gray-900">${selectedProduct.price.toFixed(2)}</span>
@@ -461,10 +461,10 @@ const MensFashionStore: React.FC = () => {
                   </div>
                   <div className="mt-8 space-y-3">
                     <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-md hover:bg-gray-800 transition rounded-button">
-                      Add to Cart
+                      Ajouter au panier
                     </button>
                     <button className="w-full bg-pink-600 text-white py-3 px-6 rounded-md hover:bg-pink-700 transition rounded-button">
-                      Buy Now
+                      Achat immédiat
                     </button>
                   </div>
                 </div>
@@ -491,7 +491,7 @@ const MensFashionStore: React.FC = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">LUXE</h3>
               <p className="text-gray-400 text-sm">
-                Discover the latest trends in men's luxury fashion and explore our exclusive collection.
+                Découvrez les dernières tendances en mode homme et explorez notre collection exclusive.
               </p>
               <div className="flex space-x-4 mt-6">
                 <a className="text-gray-400 hover:text-white transition cursor-pointer">
@@ -509,42 +509,42 @@ const MensFashionStore: React.FC = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Shop</h3>
+              <h3 className="text-lg font-bold mb-4">Magasin</h3>
               <ul className="space-y-2">
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">New Arrivals</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Bestsellers</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Sale</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Nouveaux arrivages</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Meilleures ventes</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Promotions</a></li>
                 <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Collections</a></li>
                 <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Lookbook</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Help</h3>
+              <h3 className="text-lg font-bold mb-4">Aide</h3>
               <ul className="space-y-2">
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Customer Service</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Shipping & Returns</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Size Guide</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Service client</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Livraison & Retours</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Guide de taille</a></li>
                 <li><a className="text-gray-400 hover:text-white transition cursor-pointer">FAQs</a></li>
-                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Contact Us</a></li>
+                <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Contactez-nous</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Subscribe</h3>
+              <h3 className="text-lg font-bold mb-4">Abonnez-vous</h3>
               <p className="text-gray-400 text-sm mb-4">
-                Sign up for our newsletter to receive updates and exclusive offers.
+                Abonnez-vous à notre newsletter pour recevoir des mises à jour et des offres exclusives.
               </p>
               <div className="flex">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Votre email"
                   className="px-4 py-2 w-full rounded-l-md border-none focus:outline-none text-gray-900 text-sm"
                 />
                 <button className="bg-pink-600 text-white px-4 py-2 rounded-r-md hover:bg-pink-700 transition rounded-button">
-                  Subscribe
+                  Abonnez-vous
                 </button>
               </div>
               <div className="mt-6">
-                <h4 className="text-sm font-bold mb-2">Payment Methods</h4>
+                <h4 className="text-sm font-bold mb-2">Méthodes de paiement</h4>
                 <div className="flex space-x-3">
                   <i className="fab fa-cc-visa text-2xl text-gray-400"></i>
                   <i className="fab fa-cc-mastercard text-2xl text-gray-400"></i>
@@ -555,7 +555,7 @@ const MensFashionStore: React.FC = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 text-sm">
-            <p>&copy; 2025 LUXE. All rights reserved.</p>
+            <p>&copy; 2025 LUXE. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
