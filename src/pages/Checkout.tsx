@@ -82,7 +82,7 @@ const App: React.FC = () => {
                 <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center">
                   <i className="fas fa-shopping-cart text-sm"></i>
                 </div>
-                <span className="text-xs mt-1 font-medium">Cart</span>
+                <span className="text-xs mt-1 font-medium text-indigo-600">Shipping Details</span>
               </div>
               <div className="w-12 h-1 bg-indigo-600 mx-1"></div>
               <div className="flex flex-col items-center">
