@@ -60,14 +60,15 @@ const App: React.FC = () => {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a 
-            href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" 
+          <button 
+            onClick={() => window.location.href = '/'}
+            type="button"
             data-readdy="true"
             className="flex items-center text-gray-600 hover:text-gray-900 cursor-pointer"
           >
             <i className="fas fa-arrow-left mr-2"></i>
             <span>Back to Cart</span>
-          </a>
+          </button>
           <div className="text-center flex-1">
             <h1 className="text-2xl font-bold tracking-wider text-gray-900">LUXE</h1>
           </div>

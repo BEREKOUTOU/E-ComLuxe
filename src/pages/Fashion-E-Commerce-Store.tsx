@@ -493,6 +493,9 @@ return (
             </button>
             <button
               className="w-full px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors cursor-pointer whitespace-nowrap !rounded-button"
+                    onClick={() => {
+                      window.location.href = '/checkout';
+              }}
             >
               Passer au paiement
             </button>
