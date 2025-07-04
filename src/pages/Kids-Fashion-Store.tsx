@@ -421,7 +421,7 @@ return (
                       setSelectedQuickViewColor('');
                       setQuickViewQuantity(1);
                     }}
-                    className="bg-white text-gray-900 px-4 m-2 py-2 rounded-full text-sm font-medium hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button transform transition-all duration-300 hover:scale-105 hover:shadow-lg align-center"
+                    className="bg-white text-gray-900 px-4 m-1 py-2 rounded-full text-sm font-medium hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button transform transition-all duration-300 hover:scale-105 hover:shadow-lg align-center"
                   >
                     Aperçu rapide
                   </button>
@@ -460,7 +460,7 @@ return (
                     setTimeout(() => toast.remove(), 300);
                     }, 3000);
                     }}
-                    className="bg-gray-900 text-white px-4 m-2 py-2 rounded-full text-sm font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button"
+                    className="bg-gray-900 text-white px-4 m-1 py-2 rounded-full text-sm font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button"
                   >
                     Ajouter au panier
                   </button>
