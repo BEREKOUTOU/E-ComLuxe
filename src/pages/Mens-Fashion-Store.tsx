@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Shirt from '../assets/images/homme/Classic White Shirt.jpg';
+import Pants from '../assets/images/homme/Jean classique pour homme, pantalon en denim….jpeg';
+import Jacket from '../assets/images/homme/T-shirt décontracté1.jpg';
+import TShirt from '../assets/images/homme/T-shirt décontracté.jpg';
+import Jeans from '../assets/images/homme/ConMotion Mens.jpg';
 const MensFashionStore: React.FC = () => {
   const navigate = useNavigate();
 
@@ -11,7 +15,7 @@ const MensFashionStore: React.FC = () => {
       name: "Classic White Shirt",
       price: 59.99,
       rating: 4.5,
-      image: "https://readdy.ai/api/search-image?query=classic%20white%20shirt%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Shirt,
       colors: ["White", "Blue", "Black"],
       sizes: ["XS", "S", "M", "L", "XL"],
       category: "Shirts",
@@ -23,7 +27,7 @@ const MensFashionStore: React.FC = () => {
       name: "Slim Fit Pants",
       price: 89.99,
       rating: 4.7,
-      image: "https://readdy.ai/api/search-image?query=slim%20fit%20pants%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Pants,
       colors: ["Black", "Gray", "Navy"],
       sizes: ["S", "M", "L", "XL"],
       category: "Pants",
@@ -35,7 +39,7 @@ const MensFashionStore: React.FC = () => {
       name: "Elegant Suit Jacket",
       price: 249.99,
       rating: 4.9,
-      image: "https://readdy.ai/api/search-image?query=elegant%20suit%20jacket%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Jacket,
       colors: ["Black", "Navy"],
       sizes: ["M", "L", "XL"],
       category: "Suits",
@@ -47,7 +51,7 @@ const MensFashionStore: React.FC = () => {
       name: "Casual T-Shirt",
       price: 29.99,
       rating: 4.2,
-      image: "https://readdy.ai/api/search-image?query=casual%20t-shirt%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: TShirt,
       colors: ["White", "Black", "Red"],
       sizes: ["XS", "S", "M", "L", "XL"],
       category: "Shirts",
@@ -59,7 +63,7 @@ const MensFashionStore: React.FC = () => {
       name: "Denim Jeans",
       price: 79.99,
       rating: 4.6,
-      image: "https://readdy.ai/api/search-image?query=denim%20jeans%20on%20white%20background&width=300&height=400&orientation=portrait",
+      image: Jeans,
       colors: ["Blue", "Black"],
       sizes: ["S", "M", "L", "XL"],
       category: "Pants",
@@ -188,6 +192,7 @@ const MensFashionStore: React.FC = () => {
             <span className="text-pink-600 font-medium whitespace-nowrap rounded-button cursor-default">Hommes</span>
             <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Enfants</Link>
             <Link to="/accessories" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Accessoires</Link>
+            <Link to="/sale" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Solde</Link>
           </nav>
           <div className="flex items-center space-x-6">
             <div className="relative">
@@ -480,7 +485,7 @@ const MensFashionStore: React.FC = () => {
           className="fixed bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition rounded-button"
           aria-label="Back to top"
         >
-          <i className="fas fa-chevron-up"></i>
+          <i className="fas fa-arrow-up"></i>
         </button>
       )}
 
@@ -539,7 +544,7 @@ const MensFashionStore: React.FC = () => {
                   placeholder="Votre email"
                   className="px-4 py-2 w-full rounded-l-md border-none focus:outline-none text-gray-900 text-sm"
                 />
-                <button className="bg-pink-600 text-white px-4 py-2 rounded-r-md hover:bg-pink-700 transition rounded-button">
+                <button className="bg-pink-600 text-white px-4 py-2 rounded-r-md hover:bg-pink-700 transition whitespace-nowrap !rounded-button">
                   Abonnez-vous
                 </button>
               </div>

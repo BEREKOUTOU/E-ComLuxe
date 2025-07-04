@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const App: React.FC = () => {
   const [sortOption, setSortOption] = useState('featured');
@@ -76,7 +77,7 @@ const App: React.FC = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "Elegant Silk Blouse",
+      name: "Chemisier en soie élégant",
       originalPrice: 120,
       salePrice: 72,
       discount: 40,
@@ -87,7 +88,7 @@ const App: React.FC = () => {
     },
     {
       id: 2,
-      name: "Designer Leather Handbag",
+      name: "Sac à main en cuir de designer",
       originalPrice: 350,
       salePrice: 245,
       discount: 30,
@@ -98,7 +99,7 @@ const App: React.FC = () => {
     },
     {
       id: 3,
-      name: "Premium Wool Coat",
+      name: "Manteau en laine premium",
       originalPrice: 280,
       salePrice: 168,
       discount: 40,
@@ -109,7 +110,7 @@ const App: React.FC = () => {
     },
     {
       id: 4,
-      name: "Leather Chelsea Boots",
+      name: "Bottes en cuir de chelsea",
       originalPrice: 220,
       salePrice: 154,
       discount: 30,
@@ -120,7 +121,7 @@ const App: React.FC = () => {
     },
     {
       id: 5,
-      name: "Cashmere Sweater",
+      name: "Pull en laine de cashmere",
       originalPrice: 180,
       salePrice: 99,
       discount: 45,
@@ -131,7 +132,7 @@ const App: React.FC = () => {
     },
     {
       id: 6,
-      name: "Designer Sunglasses",
+      name: "Soleil de designer",
       originalPrice: 195,
       salePrice: 117,
       discount: 40,
@@ -142,7 +143,7 @@ const App: React.FC = () => {
     },
     {
       id: 7,
-      name: "Slim Fit Denim Jeans",
+      name: "Jeans à large ceinture",
       originalPrice: 150,
       salePrice: 90,
       discount: 40,
@@ -153,7 +154,7 @@ const App: React.FC = () => {
     },
     {
       id: 8,
-      name: "Silk Evening Dress",
+      name: "Robe de soirée en soie",
       originalPrice: 320,
       salePrice: 192,
       discount: 40,
@@ -165,7 +166,7 @@ const App: React.FC = () => {
   ];
 
   const categories = ["Clothing", "Shoes", "Accessories"];
-  const sizes = ["XS", "S", "M", "L", "XL", "One Size", "36", "37", "38", "39", "40", "41", "28", "30", "32", "34", "36"];
+  const sizes = ["XS", "S", "M", "L", "XL", "One Size", "36", "37", "38", "39", "40", "41", "28", "30", "32", "34"];
   const colors = ["White", "Black", "Beige", "Brown", "Tan", "Camel", "Gray", "Blue", "Cream", "Gold/Brown", "Silver/Black", "Rose Gold/Pink", "Dark Blue", "Light Blue", "Red", "Navy", "Burgundy"];
 
   const toggleCategory = (category: string) => {
@@ -257,6 +258,32 @@ const App: React.FC = () => {
         return 0;
     }
   });
+   
+  // Back to Top Button state and handler
+ const [showBackToTop, setShowBackToTop] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setShowBackToTop(window.scrollY > 300);
+  };
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+  {/*Back to Top Button */}
+  {showBackToTop && (
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition rounded-button"
+      aria-label="Back to top"
+    >
+      <i className="fas fa-arrow-up"></i>
+    </button>
+  )}
 
   return (
     <div className="min-h-screen bg-white">
@@ -264,13 +291,13 @@ const App: React.FC = () => {
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" data-readdy="true" className="text-3xl font-bold text-gray-800 mr-10">LUXE</a>
+            <a href="" data-readdy="true" className="text-3xl font-bold text-gray-800 mr-10">LUXE</a>
             <nav className="hidden md:flex space-x-8">
-              <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Women</a>
-              <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Men</a>
-              <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Kids</a>
-              <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Accessories</a>
-              <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/238366c2-99b8-4f69-865b-3e3f085d725f" data-readdy="true" className="text-red-600 hover:text-red-700 font-medium">Sale</a>
+              <Link to="/Women" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Femmes</Link>
+              <Link to="/Men" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Hommes</Link>
+              <Link to="/Children" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Enfants</Link>
+              <Link to="/Accessories" data-readdy="true" className="text-gray-600 hover:text-gray-900 font-medium">Accessoires</Link>
+              <Link to="/Sale" data-readdy="true" className="text-red-600 hover:text-red-700 font-medium">Solde</Link>
             </nav>
           </div>
           <div className="flex items-center space-x-6">
@@ -296,21 +323,21 @@ const App: React.FC = () => {
       {/* Sale Banner */}
       <div className="relative bg-gradient-to-r from-red-600 to-red-500 overflow-hidden">
         <div className="container mx-auto px-4 py-12 md:py-20 flex flex-col items-center justify-center text-center text-white relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">SPRING SALE</h1>
-          <p className="text-xl md:text-2xl mb-6">Up to 50% OFF on selected items</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">SOLDES DE PRINTEMPS</h1>
+          <p className="text-xl md:text-2xl mb-6">Jusqu'à 50% de réduction sur les articles sélectionnés</p>
           
           <div className="flex space-x-4 md:space-x-8 mt-4">
             <div className="flex flex-col items-center">
               <div className="bg-white bg-opacity-20 rounded-lg w-14 md:w-20 h-14 md:h-20 flex items-center justify-center mb-2">
                 <span className="text-xl md:text-3xl font-bold">{timeLeft.days}</span>
               </div>
-              <span className="text-sm">Days</span>
+              <span className="text-sm">Jours</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-white bg-opacity-20 rounded-lg w-14 md:w-20 h-14 md:h-20 flex items-center justify-center mb-2">
                 <span className="text-xl md:text-3xl font-bold">{timeLeft.hours}</span>
               </div>
-              <span className="text-sm">Hours</span>
+              <span className="text-sm">Heures</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-white bg-opacity-20 rounded-lg w-14 md:w-20 h-14 md:h-20 flex items-center justify-center mb-2">
@@ -362,10 +389,10 @@ const App: React.FC = () => {
                 onChange={(e) => setSortOption(e.target.value)}
                 className="border border-gray-300 rounded-lg text-sm px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-gray-200"
               >
-                <option value="featured">Featured</option>
-                <option value="price-low-high">Price: Low to High</option>
-                <option value="price-high-low">Price: High to Low</option>
-                <option value="discount">Biggest Discount</option>
+                <option value="featured">En vedette</option>
+                <option value="price-low-high">Prix: Faible au Fort</option>
+                <option value="price-high-low">Prix: Fort au Faible</option>
+                <option value="discount">Plus grand remise</option>
               </select>
             </div>
           </div>
@@ -391,11 +418,11 @@ const App: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="font-medium mb-3">Sizes</h3>
+                <h3 className="font-medium mb-3">Tailles</h3>
                 <div className="flex flex-wrap gap-2">
-                  {sizes.map((size) => (
+                  {sizes.map((size, index) => (
                     <button
-                      key={size}
+                      key={`${size}-${index}`}
                       onClick={() => toggleSize(size)}
                       className={`px-3 py-1 text-sm border rounded-lg !rounded-button whitespace-nowrap ${
                         selectedSizes.includes(size) 
@@ -410,7 +437,7 @@ const App: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="font-medium mb-3">Colors</h3>
+                <h3 className="font-medium mb-3">Couleurs</h3>
                 <div className="flex flex-wrap gap-2">
                   {colors.map((color) => (
                     <button
@@ -429,7 +456,7 @@ const App: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="font-medium mb-3">Price Range</h3>
+                <h3 className="font-medium mb-3">Gamme de prix</h3>
                 <div className="px-2">
                   <input 
                     type="range" 
@@ -472,13 +499,13 @@ const App: React.FC = () => {
                         onClick={() => handleQuickView(product)}
                         className="bg-white text-gray-800 px-3 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer"
                       >
-                        <i className="fas fa-eye mr-1"></i> Quick View
+                        <i className="fas fa-eye mr-1"></i> Aperçu rapide
                       </button>
                       <button 
                         onClick={() => addToCart(product)}
                         className="bg-black text-white px-3 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer"
                       >
-                        <i className="fas fa-shopping-bag mr-1"></i> Add to Cart
+                        <i className="fas fa-shopping-bag mr-1"></i> Ajouter au panier
                       </button>
                     </div>
                   </div>
@@ -490,8 +517,8 @@ const App: React.FC = () => {
                     <span className="ml-2 text-gray-500 line-through text-sm">${product.originalPrice}</span>
                   </div>
                   <div className="mt-2 flex flex-wrap gap-1">
-                    {product.sizes.slice(0, 4).map((size) => (
-                      <span key={size} className="text-xs text-gray-500 border border-gray-300 rounded px-1.5 py-0.5">
+                    {product.sizes.slice(0, 4).map((size, index) => (
+                      <span key={`${size}-${index}`} className="text-xs text-gray-500 border border-gray-300 rounded px-1.5 py-0.5">
                         {size}
                       </span>
                     ))}
@@ -508,8 +535,8 @@ const App: React.FC = () => {
         ) : (
           <div className="text-center py-16">
             <i className="fas fa-search text-4xl text-gray-300 mb-4"></i>
-            <h3 className="text-xl font-medium text-gray-700">No products found</h3>
-            <p className="text-gray-500 mt-2">Try changing your filter options</p>
+            <h3 className="text-xl font-medium text-gray-700">Aucun produit trouvé</h3>
+            <p className="text-gray-500 mt-2">Essayez de changer vos options de filtre</p>
           </div>
         )}
       </div>
@@ -545,7 +572,7 @@ const App: React.FC = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <h3 className="font-medium mb-2">Size</h3>
+                  <h3 className="font-medium mb-2">Taille</h3>
                   <div className="flex flex-wrap gap-2">
                     {quickViewProduct.sizes.map((size) => (
                       <button
@@ -559,7 +586,7 @@ const App: React.FC = () => {
                 </div>
                 
                 <div className="mt-6">
-                  <h3 className="font-medium mb-2">Color</h3>
+                  <h3 className="font-medium mb-2">Couleur</h3>
                   <div className="flex flex-wrap gap-2">
                     {quickViewProduct.colors.map((color) => (
                       <button
@@ -587,7 +614,7 @@ const App: React.FC = () => {
                       onClick={() => addToCart(quickViewProduct)}
                       className="ml-4 bg-black text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer"
                     >
-                      Add to Cart
+                      Ajouter au panier
                     </button>
                   </div>
                 </div>
@@ -596,10 +623,10 @@ const App: React.FC = () => {
                   <p>Category: {quickViewProduct.category}</p>
                   <div className="mt-4 flex items-center space-x-4">
                     <button className="text-gray-600 hover:text-gray-800 cursor-pointer !rounded-button whitespace-nowrap">
-                      <i className="far fa-heart mr-1"></i> Add to Wishlist
+                      <i className="far fa-heart mr-1"></i> Ajouter aux favoris
                     </button>
                     <button className="text-gray-600 hover:text-gray-800 cursor-pointer !rounded-button whitespace-nowrap">
-                      <i className="fas fa-share-alt mr-1"></i> Share
+                      <i className="fas fa-share-alt mr-1"></i> Partager
                     </button>
                   </div>
                 </div>
@@ -618,7 +645,7 @@ const App: React.FC = () => {
               <div className="h-full flex flex-col bg-white shadow-xl overflow-y-auto">
                 <div className="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
                   <div className="flex items-start justify-between">
-                    <h2 className="text-lg font-medium text-gray-900">Shopping Cart</h2>
+                    <h2 className="text-lg font-medium text-gray-900">Panier</h2>
                     <button 
                       onClick={() => setShowCart(false)}
                       className="text-gray-400 hover:text-gray-500 cursor-pointer !rounded-button whitespace-nowrap"
@@ -637,7 +664,7 @@ const App: React.FC = () => {
                           onClick={() => setShowCart(false)}
                           className="mt-4 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer"
                         >
-                          Continue Shopping
+                          Continuer les achats
                         </button>
                       </div>
                     ) : (
@@ -684,7 +711,7 @@ const App: React.FC = () => {
                                     onClick={() => removeFromCart(index)}
                                     className="font-medium text-red-600 hover:text-red-500 cursor-pointer !rounded-button whitespace-nowrap"
                                   >
-                                    Remove
+                                    Supprimer
                                   </button>
                                 </div>
                               </div>
@@ -708,7 +735,7 @@ const App: React.FC = () => {
                         href="#"
                         className="flex justify-center items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-black hover:bg-gray-800 !rounded-button whitespace-nowrap cursor-pointer"
                       >
-                        Checkout
+                        Passer au paiement
                       </a>
                     </div>
                     <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
@@ -719,7 +746,7 @@ const App: React.FC = () => {
                           className="text-black font-medium hover:text-gray-800 cursor-pointer !rounded-button whitespace-nowrap"
                           onClick={() => setShowCart(false)}
                         >
-                          Continue Shopping<span aria-hidden="true"> &rarr;</span>
+                          Continuer les achats<span aria-hidden="true"> &rarr;</span>
                         </button>
                       </p>
                     </div>
@@ -738,7 +765,7 @@ const App: React.FC = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">LUXE</h3>
               <p className="text-gray-600 mb-4">
-                Premium fashion for the discerning customer. Quality materials, exceptional craftsmanship.
+              Mode haut de gamme pour une clientèle exigeante. Matériaux de qualité, savoir-faire exceptionnel.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-500 hover:text-gray-700 cursor-pointer">
@@ -759,29 +786,29 @@ const App: React.FC = () => {
             <div>
               <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Shop</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Women</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Men</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Kids</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Accessories</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Sale</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">New Arrivals</a></li>
+                <li><Link to="/womens-fashion-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Femme</Link></li>
+                <li><Link to="/mens-fashion-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Homme</Link></li>
+                <li><Link to="/kids-fashion-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Enfants</Link></li>
+                <li><Link to="/accessories-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Accessories</Link></li>
+                <li><Link to="/sale" className="text-gray-600 hover:text-gray-900 cursor-pointer">Sale</Link></li>
+                <li><Link to="/new-arrivals" className="text-gray-600 hover:text-gray-900 cursor-pointer">Nouveaux arrivages</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Customer Service</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Customer Service client</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Contact Us</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Shipping & Returns</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">FAQ</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Size Guide</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 cursor-pointer">Track Order</a></li>
+                <li><Link to="/contact" className="text-gray-600 hover:text-gray-900 cursor-pointer">Contactez-nous</Link></li>
+                <li><Link to="/shipping" className="text-gray-600 hover:text-gray-900 cursor-pointer">Livraison & Retours</Link></li>
+                <li><Link to="/faq" className="text-gray-600 hover:text-gray-900 cursor-pointer">FAQ</Link></li>
+                <li><Link to="/size-guide" className="text-gray-600 hover:text-gray-900 cursor-pointer">Guide de Taille</Link></li>
+                <li><Link to="/track-order" className="text-gray-600 hover:text-gray-900 cursor-pointer">Suivre la commande</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Subscribe</h3>
-              <p className="text-gray-600 mb-4">Sign up for exclusive offers, original stories, events and more.</p>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Abonnement</h3>
+              <p className="text-gray-600 mb-4">Inscrivez-vous pour recevoir des offres exclusives, des histoires originales, des événements et plus encore.</p>
               <div className="flex">
                 <input 
                   type="email" 
@@ -789,7 +816,7 @@ const App: React.FC = () => {
                   className="px-4 py-2 w-full border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gray-200 text-sm"
                 />
                 <button className="bg-black text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-                  Subscribe
+                  S'abonner
                 </button>
               </div>
             </div>
@@ -797,7 +824,7 @@ const App: React.FC = () => {
           
           <div className="border-t border-gray-200 mt-10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-500 text-sm">© 2025 LUXE. All rights reserved.</p>
+              <p className="text-gray-500 text-sm">© 2025 LUXE. Tous droits réservés.</p>
               <div className="flex items-center space-x-4 mt-4 md:mt-0">
                 <i className="fab fa-cc-visa text-gray-600 text-2xl"></i>
                 <i className="fab fa-cc-mastercard text-gray-600 text-2xl"></i>
@@ -808,6 +835,16 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition rounded-button"
+          aria-label="Back to top"
+        >
+          <i className="fas fa-arrow-up"></i>
+        </button>
+      )}
     </div>
   );
 }

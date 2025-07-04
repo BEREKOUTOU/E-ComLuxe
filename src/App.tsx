@@ -10,7 +10,7 @@ import Accessories from './pages/Accessories-Fashion-Store.tsx';
 import Checkout from './pages/Checkout.tsx';
 import KidsProductDetails from './pages/Kids-Product-Details';
 import './App.css';
-
+import Sale from './pages/Discount-Sale-Products-Page.tsx';
 function App() {
   return (
     <Router>
@@ -21,6 +21,7 @@ function App() {
         <Route path="/children" element={<Children />} />
         <Route path="/kids-product-details/:id" element={<KidsProductDetails />} />
         <Route path="/accessories" element={<Accessories />} />
+        <Route path="/sale" element={<Sale />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </Router>

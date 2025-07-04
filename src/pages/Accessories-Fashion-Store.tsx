@@ -488,7 +488,7 @@ const AccessoriesFashionStore: React.FC = () => {
           className="fixed bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition rounded-button"
           aria-label="Back to top"
         >
-          <i className="fas fa-chevron-up"></i>
+          <i className="fas fa-arrow-up"></i>
         </button>
       )}
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import * as echarts from 'echarts';
@@ -117,9 +118,9 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
-              <a href="#" data-readdy="true" className="text-2xl font-bold text-gray-900">LUXE</a>
+              <Link to="/" data-readdy="true" className="text-2xl font-bold text-gray-900">LUXE</Link>
               <nav className="hidden md:flex space-x-6">
-                <a href="#" data-readdy="true" className="text-gray-600 hover:text-gray-900">Accueil</a>
+                <Link to="/" data-readdy="true" className="text-gray-600 hover:text-gray-900">Accueil</Link>
                 <button className="text-gray-600 hover:text-gray-900 cursor-pointer whitespace-nowrap !rounded-button">Femmes</button>
                 <button className="text-gray-600 hover:text-gray-900 cursor-pointer whitespace-nowrap !rounded-button">Hommes</button>
                 <button className="text-gray-900 font-medium cursor-pointer whitespace-nowrap !rounded-button">Enfants</button>
@@ -149,11 +150,11 @@ const App: React.FC = () => {
       <div className="bg-gray-50 mt-16">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center space-x-2 text-sm">
-            <a href="#" data-readdy="true" className="text-gray-600 hover:text-gray-900">Accueil</a>
+            <Link to="/" data-readdy="true" className="text-gray-600 hover:text-gray-900">Accueil</Link>
             <i className="fas fa-chevron-right text-gray-400 text-xs"></i>
-            <a href="#" data-readdy="true" className="text-gray-600 hover:text-gray-900">Enfants</a>
+            <Link to="/Children" data-readdy="true" className="text-gray-600 hover:text-gray-900">Enfants</Link>
             <i className="fas fa-chevron-right text-gray-400 text-xs"></i>
-            <a href="#" data-readdy="true" className="text-gray-600 hover:text-gray-900">Vêtements</a>
+            <Link to="/kids-product-details/:id" data-readdy="true" className="text-gray-600 hover:text-gray-900">Vêtements</Link>
             <i className="fas fa-chevron-right text-gray-400 text-xs"></i>
             <span className="text-gray-900">{product.name}</span>
           </div>

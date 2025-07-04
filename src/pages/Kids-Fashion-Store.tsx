@@ -14,29 +14,49 @@ const [selectedQuickViewColor, setSelectedQuickViewColor] = useState<string>('')
 const [quickViewQuantity, setQuickViewQuantity] = useState<number>(1);
 const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
 const [cartItems, setCartItems] = useState<number>(0);
+const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
+
 React.useEffect(() => {
-const handleClickOutside = (event: MouseEvent) => {
-const userMenuButton = document.getElementById('userMenuButton');
-const userDropdownMenu = document.getElementById('userDropdownMenu');
-const colorDropdownButton = document.getElementById('colorDropdownButton');
-const colorDropdown = document.getElementById('colorDropdown');
-if (userMenuButton && userDropdownMenu &&
-!userMenuButton.contains(event.target as Node) &&
-!userDropdownMenu.contains(event.target as Node)) {
-setIsUserMenuOpen(false);
-}
-if (colorDropdownButton && colorDropdown &&
-!colorDropdownButton.contains(event.target as Node) &&
-!colorDropdown.contains(event.target as Node)) {
-colorDropdown.classList.add('hidden');
-}
-};
-document.addEventListener('mousedown', handleClickOutside);
-return () => {
-document.removeEventListener('mousedown', handleClickOutside);
-};
+  const handleClickOutside = (event: MouseEvent) => {
+    const userMenuButton = document.getElementById('userMenuButton');
+    const userDropdownMenu = document.getElementById('userDropdownMenu');
+    const colorDropdownButton = document.getElementById('colorDropdownButton');
+    const colorDropdown = document.getElementById('colorDropdown');
+    if (
+      userMenuButton &&
+      userDropdownMenu &&
+      !userMenuButton.contains(event.target as Node) &&
+      !userDropdownMenu.contains(event.target as Node)
+    ) {
+      setIsUserMenuOpen(false);
+    }
+    if (
+      colorDropdownButton &&
+      colorDropdown &&
+      !colorDropdownButton.contains(event.target as Node) &&
+      !colorDropdown.contains(event.target as Node)
+    ) {
+      colorDropdown.classList.add('hidden');
+    }
+  };
+
+  const handleScroll = () => {
+    setShowBackToTop(window.scrollY > 300);
+  };
+
+  document.addEventListener('mousedown', handleClickOutside);
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+    window.removeEventListener('scroll', handleScroll);
+  };
 }, []);
-const ageGroups = ['0-2 years', '2-5 years', '5-8 years', '8-12 years'];
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+const ageGroups = ['0-2 ans', '2-5 ans', '5-8 ans', '8-12 ans'];
 const categories = ['School Wear', 'Playwear', 'Special Occasion', 'Accessories', 'Shoes', 'New Arrivals', 'Sale'];
 const sizes = ['2Y', '3Y', '4Y', '5Y', '6Y', '7Y', '8Y', '9Y', '10Y', '11Y', '12Y'];
 const colors = [
@@ -133,7 +153,7 @@ return (
           <div className="relative">
             <input
               type="text"
-              placeholder="Search kids' fashion..."
+              placeholder="Rechercher..."
               className="w-48 pl-10 pr-4 py-2 border-none rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-sm"
             />
             <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
@@ -513,6 +533,17 @@ return (
         </div>
       </div>
     </footer>
+    {/* Back to Top Button */}
+    {showBackToTop && (
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition rounded-button"
+        aria-label="Back to top"
+      >
+        <i className="fas fa-arrow-up"></i>
+      </button>
+    )}
+    
     {/* Size Chart Modal */}
     {showSizeChart && (
       <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">

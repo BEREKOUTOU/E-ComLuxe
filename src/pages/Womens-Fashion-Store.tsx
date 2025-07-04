@@ -19,7 +19,7 @@ document.removeEventListener('mousedown', handleClickOutside);
 const [products] = useState([
 {
 id: 1,
-name: "Floral Summer Dress",
+name: "Robe d'été fleurie",
 price: 89.99,
 rating: 4.5,
 image: "https://readdy.ai/api/search-image?query=elegant%20floral%20summer%20dress%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=300&height=400&seq=1&orientation=portrait",
@@ -43,7 +43,7 @@ isBestseller: false
 },
 {
 id: 3,
-name: "High-Waisted Jeans",
+name: "Jeans à large ceinture",
 price: 79.99,
 rating: 4.7,
 image: "https://readdy.ai/api/search-image?query=high%20waisted%20jeans%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=300&height=400&seq=3&orientation=portrait",
@@ -55,7 +55,7 @@ isBestseller: true
 },
 {
 id: 4,
-name: "Wool Blend Coat",
+name: "Manteau de laine",
 price: 159.99,
 rating: 4.8,
 image: "https://readdy.ai/api/search-image?query=elegant%20wool%20blend%20coat%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=300&height=400&seq=4&orientation=portrait",
@@ -67,7 +67,7 @@ isBestseller: true
 },
 {
 id: 5,
-name: "Silk Evening Gown",
+name: "Robe de soirée en soie",
 price: 199.99,
 rating: 4.9,
 image: "https://readdy.ai/api/search-image?query=elegant%20silk%20evening%20gown%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=300&height=400&seq=5&orientation=portrait",
@@ -79,7 +79,7 @@ isBestseller: false
 },
 {
 id: 6,
-name: "Cotton T-Shirt",
+name: "Robe en coton",
 price: 29.99,
 rating: 4.3,
 image: "https://readdy.ai/api/search-image?query=basic%20cotton%20t-shirt%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=300&height=400&seq=6&orientation=portrait",
@@ -91,7 +91,7 @@ isBestseller: true
 },
 {
 id: 7,
-name: "Pleated Midi Skirt",
+name: "Robe à plis au niveau du genou",
 price: 69.99,
 rating: 4.4,
 image: "https://readdy.ai/api/search-image?query=pleated%20midi%20skirt%20on%20mannequin%2C%20white%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20soft%20lighting%2C%20minimalist%20background%2C%20detailed%20fabric%20texture&width=300&height=400&seq=7&orientation=portrait",
@@ -168,6 +168,23 @@ const [quickViewOpen, setQuickViewOpen] = useState(false);
 const [quantity, setQuantity] = useState(1);
 const [selectedSize, setSelectedSize] = useState("");
 const [selectedColor, setSelectedColor] = useState("");
+
+// Back to Top button state
+const [showBackToTop, setShowBackToTop] = useState(false);
+
+// Scroll handler for Back to Top button
+useEffect(() => {
+  const handleScroll = () => {
+    setShowBackToTop(window.scrollY > 300);
+  };
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+// Scroll to top function
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 // Available filters
 const categories = ["All", "Dresses", "Tops", "Bottoms", "Outerwear"];
 const sizes = ["All", "XS", "S", "M", "L", "XL"];
@@ -264,6 +281,7 @@ return (
           <Link to="/men" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Hommes</Link>
           <Link to="/children" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Enfants</Link>
           <Link to="/accessories" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Accessoires</Link>
+          <Link to="/sale" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap !rounded-button">Sale</Link>
         </nav>
         {/* Search, Cart, User */}
         <div className="flex items-center space-x-6">
@@ -911,21 +929,21 @@ return (
         <div>
           <h3 className="text-lg font-bold mb-4">Magasin</h3>
           <ul className="space-y-2">
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Nouveaux arrivages</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Meilleures ventes</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Promotions</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Collections</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Lookbook</a></li>
+            <li><Link to="/new-arrivals" className="text-gray-400 hover:text-white transition cursor-pointer">Nouveaux arrivages</Link></li>
+            <li><Link to="/best-sellers" className="text-gray-400 hover:text-white transition cursor-pointer">Meilleures ventes</Link></li>
+            <li><Link to="/promotions" className="text-gray-400 hover:text-white transition cursor-pointer">Promotions</Link></li>
+            <li><Link to="/collections" className="text-gray-400 hover:text-white transition cursor-pointer">Collections</Link></li>
+            <li><Link to="/lookbook" className="text-gray-400 hover:text-white transition cursor-pointer">Lookbook</Link></li>
           </ul>
         </div>
         <div>
           <h3 className="text-lg font-bold mb-4">Aide</h3>
           <ul className="space-y-2">
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Service client</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Livraison & Retours</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Guide de taille</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">FAQs</a></li>
-            <li><a className="text-gray-400 hover:text-white transition cursor-pointer">Contact Us</a></li>
+            <li><Link to="/customer-service" className="text-gray-400 hover:text-white transition cursor-pointer">Service client</Link></li>
+            <li><Link to="/shipping-and-returns" className="text-gray-400 hover:text-white transition cursor-pointer">Livraison & Retours</Link></li>
+            <li><Link to="/size-guide" className="text-gray-400 hover:text-white transition cursor-pointer">Guide de taille</Link></li>
+            <li><Link to="/faqs" className="text-gray-400 hover:text-white transition cursor-pointer">FAQs</Link></li>
+            <li><Link to="/contact-us" className="text-gray-400 hover:text-white transition cursor-pointer">Contact Us</Link></li>
           </ul>
         </div>
         <div>
@@ -959,6 +977,16 @@ return (
       </div>
     </div>
   </footer>
+  {/* Back to Top Button */}
+  {showBackToTop && (
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition rounded-button"
+      aria-label="Back to top"
+    >
+      <i className="fas fa-arrow-up"></i>
+    </button>
+  )}
 </div>
 );
 }
