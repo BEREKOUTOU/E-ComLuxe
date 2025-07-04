@@ -272,7 +272,7 @@ return (
           data-readdy="true"
           className="text-2xl font-bold text-gray-800 cursor-pointer"
         >
-          FASHION<span className="text-pink-600">NOVA</span>
+          LUXE<span className="text-pink-600">NOVA</span>
         </a>
         {/* Navigation */}
         <nav className="hidden md:flex space-x-8">
@@ -907,7 +907,7 @@ return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-lg font-bold mb-4">FASHION<span className="text-pink-500">NOVA</span></h3>
+          <h3 className="text-lg font-bold mb-4">LUXE<span className="text-pink-500">NOVA</span></h3>
           <p className="text-gray-400 text-sm">
             Découvrez les dernières tendances en mode femmes et explorez notre collection de vêtements de haute qualité conçus pour la femme moderne.
           </p>

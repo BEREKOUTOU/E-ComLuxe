@@ -759,78 +759,80 @@ const scrollToTop = () => {
       )}
 
       {/* Footer */}
-      <footer className="bg-gray-100 pt-12 pb-8 mt-16">
+      <footer className="bg-black pt-12 pb-8 mt-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4">LUXE</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg font-bold mb-4 text-white">LUXE</h3>
+              <p className="text-gray-400 mb-4">
               Mode haut de gamme pour une clientèle exigeante. Matériaux de qualité, savoir-faire exceptionnel.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-gray-700 cursor-pointer">
+                <Link to="#" className="text-gray-400 hover:text-white transition cursor-pointer">
                   <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-700 cursor-pointer">
+                </Link>
+                <Link to="#" className="text-gray-400 hover:text-white transition cursor-pointer">
                   <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-700 cursor-pointer">
+                </Link>
+                <Link to="#" className="text-gray-400 hover:text-white transition cursor-pointer">
                   <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-700 cursor-pointer">
+                </Link>
+                <Link to="#" className="text-gray-400 hover:text-white transition cursor-pointer">
                   <i className="fab fa-pinterest"></i>
-                </a>
+                </Link>
               </div>
             </div>
             
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Shop</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 text-white">Shop</h3>
               <ul className="space-y-2">
-                <li><Link to="/womens-fashion-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Femme</Link></li>
-                <li><Link to="/mens-fashion-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Homme</Link></li>
-                <li><Link to="/kids-fashion-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Enfants</Link></li>
-                <li><Link to="/accessories-store" className="text-gray-600 hover:text-gray-900 cursor-pointer">Accessories</Link></li>
-                <li><Link to="/sale" className="text-gray-600 hover:text-gray-900 cursor-pointer">Sale</Link></li>
-                <li><Link to="/new-arrivals" className="text-gray-600 hover:text-gray-900 cursor-pointer">Nouveaux arrivages</Link></li>
+                <li><Link to="/womens-fashion-store" className="text-gray-400 hover:text-white transition cursor-pointer">Femme</Link></li>
+                <li><Link to="/mens-fashion-store" className="text-gray-400 hover:text-white transition cursor-pointer">Homme</Link></li>
+                <li><Link to="/kids-fashion-store" className="text-gray-400 hover:text-white transition cursor-pointer">Enfants</Link></li>
+                <li><Link to="/accessories-store" className="text-gray-400 hover:text-white transition cursor-pointer">Accessories</Link></li>
+                <li><Link to="/sale" className="text-gray-400 hover:text-white transition cursor-pointer">Sale</Link></li>
+                <li><Link to="/new-arrivals" className="text-gray-400 hover:text-white transition cursor-pointer">Nouveaux arrivages</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Customer Service client</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 text-white">Customer Service client</h3>
               <ul className="space-y-2">
-                <li><Link to="/contact" className="text-gray-600 hover:text-gray-900 cursor-pointer">Contactez-nous</Link></li>
-                <li><Link to="/shipping" className="text-gray-600 hover:text-gray-900 cursor-pointer">Livraison & Retours</Link></li>
-                <li><Link to="/faq" className="text-gray-600 hover:text-gray-900 cursor-pointer">FAQ</Link></li>
-                <li><Link to="/size-guide" className="text-gray-600 hover:text-gray-900 cursor-pointer">Guide de Taille</Link></li>
-                <li><Link to="/track-order" className="text-gray-600 hover:text-gray-900 cursor-pointer">Suivre la commande</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-white transition cursor-pointer">Contactez-nous</Link></li>
+                <li><Link to="/shipping" className="text-gray-400 hover:text-white transition cursor-pointer">Livraison & Retours</Link></li>
+                <li><Link to="/faq" className="text-gray-400 hover:text-white transition cursor-pointer">FAQ</Link></li>
+                <li><Link to="/size-guide" className="text-gray-400 hover:text-white transition cursor-pointer">Guide de Taille</Link></li>
+                <li><Link to="/track-order" className="text-gray-400 hover:text-white transition cursor-pointer">Suivre la commande</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-4">Abonnement</h3>
-              <p className="text-gray-600 mb-4">Inscrivez-vous pour recevoir des offres exclusives, des histoires originales, des événements et plus encore.</p>
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 text-white">Abonnement</h3>
+              <p className="text-gray-400 mb-4">Inscrivez-vous pour recevoir des offres exclusives, des histoires originales, des événements et plus encore.</p>
               <div className="flex">
                 <input 
                   type="email" 
                   placeholder="Your email" 
                   className="px-4 py-2 w-full border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gray-200 text-sm"
                 />
-                <button className="bg-black text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                <button className="bg-red-600 text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
                   S'abonner
                 </button>
               </div>
+              <div className="mt-6">
+                <h4 className="text-sm font-bold mb-2 text-white">Méthodes de paiement</h4>
+                <div className="flex space-x-3">
+                  <i className="fab fa-cc-visa text-2xl text-gray-400"></i>
+                  <i className="fab fa-cc-mastercard text-2xl text-gray-400"></i>
+                  <i className="fab fa-cc-amex text-2xl text-gray-400"></i>
+                  <i className="fab fa-cc-paypal text-2xl text-gray-400"></i>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div className="border-t border-gray-200 mt-10 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-500 text-sm">© 2025 LUXE. Tous droits réservés.</p>
-              <div className="flex items-center space-x-4 mt-4 md:mt-0">
-                <i className="fab fa-cc-visa text-gray-600 text-2xl"></i>
-                <i className="fab fa-cc-mastercard text-gray-600 text-2xl"></i>
-                <i className="fab fa-cc-amex text-gray-600 text-2xl"></i>
-                <i className="fab fa-cc-paypal text-gray-600 text-2xl"></i>
-              </div>
+          <div className="border-t border-gray-800 mt-10 pt-8">
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <p className="text-gray-400 text-sm">© 2025 LUXE. Tous droits réservés.</p>
             </div>
           </div>
         </div>
