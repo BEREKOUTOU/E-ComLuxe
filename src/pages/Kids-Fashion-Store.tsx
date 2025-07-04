@@ -711,9 +711,11 @@ return (
                 >
                   {selectedQuickViewSize && selectedQuickViewColor ? 'Ajouter au panier' : 'Select Size & Color'}
                 </button>
-                <a href="https://readdy.ai/home/df6ccbb7-9c3b-4e11-9011-dd80609b3302/512f27b1-544c-48e6-ba81-5576ca904569" data-readdy="true" className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium border border-gray-300 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button inline-block text-center">
+                <Link to={`/kids-product-details/${showQuickView}`}
+                className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium border border-gray-300 hover:bg-gray-50 cursor-pointer whitespace-nowrap !rounded-button inline-block text-center"
+                >
                   Voir les détails
-                </a>
+                </Link>
               </div>
             </div>
           </div>
