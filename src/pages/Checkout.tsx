@@ -67,7 +67,7 @@ const App: React.FC = () => {
             className="flex items-center text-gray-600 hover:text-gray-900 cursor-pointer"
           >
             <i className="fas fa-arrow-left mr-2"></i>
-            <span>Back to Cart</span>
+            <span>Retour au panier</span>
           </button>
           <div className="text-center flex-1">
             <h1 className="text-2xl font-bold tracking-wider text-gray-900">LUXE</h1>
@@ -83,7 +83,7 @@ const App: React.FC = () => {
                 <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center">
                   <i className="fas fa-shopping-cart text-sm"></i>
                 </div>
-                <span className="text-xs mt-1 font-medium text-indigo-600">Shipping Details</span>
+                <span className="text-xs mt-1 font-medium text-indigo-600">Détails d'expédition</span>
               </div>
               <div className="w-12 h-1 bg-indigo-600 mx-1"></div>
               <div className="flex flex-col items-center">
@@ -109,7 +109,7 @@ const App: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Column - Checkout Form */}
           <div className="lg:w-2/3">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Checkout</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Vérifier</h2>
             
             {/* Shipping Address Section */}
             <div className="mb-6 bg-white rounded-lg shadow-sm overflow-hidden">

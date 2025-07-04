@@ -303,7 +303,7 @@ const MensFashionStore: React.FC = () => {
       {/* Product Grid */}
       <main className="container mx-auto px-4 py-8">
         {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {[...Array(8)].map((_, i) => (
               <div key={i} className="bg-white rounded-lg shadow-sm overflow-hidden animate-pulse">
                 <div className="h-80 bg-gray-200"></div>
@@ -316,7 +316,7 @@ const MensFashionStore: React.FC = () => {
             ))}
           </div>
         ) : filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {filteredProducts.map(product => (
               <div key={product.id} className="bg-white rounded-lg shadow-sm overflow-hidden group">
                 <div className="relative h-80 overflow-hidden">

@@ -70,7 +70,7 @@ const colors = [
 const products = [
 {
 id: 1,
-name: 'Floral Print Summer Dress',
+name: 'Robe d\'été à imprimé floral',
 price: 89.99,
 colors: ['#FFC0CB', '#87CEEB'],
 ageRange: '5-8 years',
@@ -78,7 +78,7 @@ image: 'https://public.readdy.ai/ai/img_res/5472b052813a01d8cbe002d5205e3fc0.jpg
 },
 {
 id: 2,
-name: 'School Uniform Set',
+name: 'Robe scolaire',
 price: 129.99,
 colors: ['#000080', '#FFFFFF'],
 ageRange: '8-12 years',
@@ -86,7 +86,7 @@ image: 'https://public.readdy.ai/ai/img_res/7f9fbba5924c7f10a449d97aba105ce6.jpg
 },
 {
 id: 3,
-name: 'Playful Dinosaur T-Shirt',
+name: 'T-shirt dino',
 price: 45.99,
 colors: ['#98FB98', '#87CEEB'],
 ageRange: '2-5 years',
@@ -94,7 +94,7 @@ image: 'https://public.readdy.ai/ai/img_res/e4b8a03c0205fef88e27dc9b6f0fc6a7.jpg
 },
 {
 id: 4,
-name: 'Special Occasion Suit',
+name: 'Robe de cérémonie',
 price: 159.99,
 colors: ['#000000', '#000080'],
 ageRange: '8-12 years',
@@ -102,7 +102,7 @@ image: 'https://public.readdy.ai/ai/img_res/9820aa1fee10d613989672314e719fde.jpg
 },
 {
 id: 5,
-name: 'Rainbow Party Dress',
+name: 'Robe de fête à arc-en-ciel',
 price: 79.99,
 colors: ['#FFC0CB', '#FFD700'],
 ageRange: '5-8 years',
@@ -110,7 +110,7 @@ image: 'https://public.readdy.ai/ai/img_res/762d09e89a82ed8309f6b19d4c9df022.jpg
 },
 {
 id: 6,
-name: 'Comfort Play Set',
+name: 'Jeu de jeu confortable',
 price: 69.99,
 colors: ['#DDA0DD', '#98FB98'],
 ageRange: '0-2 years',
@@ -118,7 +118,7 @@ image: 'https://public.readdy.ai/ai/img_res/4d5d269ff9e4ff33b5b2c336193d2df6.jpg
 },
 {
 id: 7,
-name: 'Kids Designer Sneakers',
+name: 'Sneakers de designer pour enfants',
 price: 119.99,
 colors: ['#FFFFFF', '#FFD700'],
 ageRange: '8-12 years',
@@ -126,7 +126,7 @@ image: 'https://public.readdy.ai/ai/img_res/8aba00b989d3171a0ffaf82852b2b308.jpg
 },
 {
 id: 8,
-name: 'Butterfly Hair Accessories Set',
+name: 'Accessoire de cheveux à papillon',
 price: 34.99,
 colors: ['#FFC0CB', '#DDA0DD'],
 ageRange: '5-8 years',
@@ -319,7 +319,7 @@ return (
           </button>
           <div
             id="colorDropdown"
-            className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg p-4 hidden z-50"
+            className=" top-full left-0 mt-2 bg-white shadow-lg rounded-lg p-4 hidden z-50"
           >
             <div className="grid grid-cols-6 gap-2">
               {colors.map((color) => (
@@ -405,7 +405,7 @@ return (
         )
         .map((product) => (
           <div key={product.id} className="group relative">
-            <div className="aspect-w-3 aspect-h-4 bg-gray-100 rounded-lg overflow-hidden">
+            <div className="aspect-w-3 aspect-h-4 bg-gray-100 rounded-lg overflow-hidden justify-center items-center">
               <img
                 src={product.image}
                 alt={product.name}
@@ -421,7 +421,7 @@ return (
                       setSelectedQuickViewColor('');
                       setQuickViewQuantity(1);
                     }}
-                    className="bg-white text-gray-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    className="bg-white text-gray-900 px-4 m-2 py-2 rounded-full text-sm font-medium hover:bg-gray-100 cursor-pointer whitespace-nowrap !rounded-button transform transition-all duration-300 hover:scale-105 hover:shadow-lg align-center"
                   >
                     Aperçu rapide
                   </button>
@@ -460,7 +460,7 @@ return (
                     setTimeout(() => toast.remove(), 300);
                     }, 3000);
                     }}
-                    className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button"
+                    className="bg-gray-900 text-white px-4 m-2 py-2 rounded-full text-sm font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button"
                   >
                     Ajouter au panier
                   </button>
