@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Fashion-E-Commerce-Store';
 import Women from './pages/Womens-Fashion-Store';
-import Children from './pages/Kids-Fashion-Store.tsx';
+import Children from './pages/Kids-Fashion-Store';
 import Men from './pages/Mens-Fashion-Store';
 // Update the import path and extension if the file exists with a different name or extension
-import Accessories from './pages/Accessories-Fashion-Store.tsx';
+import Accessories from './pages/Accessories-Fashion-Store';
 // Or, for example, if the file is named AccessoriesFashionStore.tsx:
  // import Accessories from './pages/AccessoriesFashionStore';
-import Checkout from './pages/Checkout.tsx';
+import Checkout from './pages/Checkout';
 import KidsProductDetails from './pages/Kids-Product-Details';
 import './App.css';
-import Sale from './pages/Discount-Sale-Products-Page.tsx';
+import Sale from './pages/Discount-Sale-Products-Page';
 function App() {
   return (
     <Router>

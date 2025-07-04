@@ -321,7 +321,7 @@ const scrollToTop = () => {
       </header>
 
       {/* Sale Banner */}
-      <div className="relative bg-gradient-to-r from-red-600 to-red-500 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden">
         <div className="container mx-auto px-4 py-12 md:py-20 flex flex-col items-center justify-center text-center text-white relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">SOLDES DE PRINTEMPS</h1>
           <p className="text-xl md:text-2xl mb-6">Jusqu'à 50% de réduction sur les articles sélectionnés</p>

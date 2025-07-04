@@ -225,7 +225,7 @@ const AccessoriesFashionStore: React.FC = () => {
       <header className="bg-white shadow-sm sticky top-0 z-30">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <a href="/" className="text-2xl font-bold text-gray-800 cursor-pointer">
-            FASHION<span className="text-pink-600">NOVA</span>
+            LUXE<span className="text-pink-600">NOVA</span>
           </a>
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-600 hover:text-pink-600 transition whitespace-nowrap rounded-button">Accueil</Link>
@@ -497,7 +497,7 @@ const AccessoriesFashionStore: React.FC = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4">FASHION<span className="text-pink-500">NOVA</span></h3>
+              <h3 className="text-lg font-bold mb-4">LUXE<span className="text-pink-500">NOVA</span></h3>
               <p className="text-gray-400 text-sm">
                 Découvrez les dernières tendances en accessoires de luxe et explorez notre collection exclusive.
               </p>
