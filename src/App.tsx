@@ -9,22 +9,25 @@ import Accessories from './pages/Accessories-Fashion-Store';
  // import Accessories from './pages/AccessoriesFashionStore';
 import Checkout from './pages/Checkout';
 import KidsProductDetails from './pages/Kids-Product-Details';
+import { CartProvider } from './context/CartContext';
 import './App.css';
 import Sale from './pages/Discount-Sale-Products-Page';
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/women" element={<Women />} />
-        <Route path="/men" element={<Men />} />
-        <Route path="/children" element={<Children />} />
-        <Route path="/kids-product-details/:id" element={<KidsProductDetails />} />
-        <Route path="/accessories" element={<Accessories />} />
-        <Route path="/sale" element={<Sale />} />
-        <Route path="/checkout" element={<Checkout />} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/women" element={<Women />} />
+          <Route path="/men" element={<Men />} />
+          <Route path="/children" element={<Children />} />
+          <Route path="/kids-product-details/:id" element={<KidsProductDetails />} />
+          <Route path="/accessories" element={<Accessories />} />
+          <Route path="/sale" element={<Sale />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 

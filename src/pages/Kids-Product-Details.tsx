@@ -7,7 +7,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import * as echarts from 'echarts';
 
+import { useCart } from '../context/CartContext';
+
 const App: React.FC = () => {
+  const { addToCart } = useCart();
+
   const [selectedTab, setSelectedTab] = useState<string>('description');
   const [selectedSize, setSelectedSize] = useState<string>('');
   const [selectedColor, setSelectedColor] = useState<string>('');
@@ -271,9 +275,20 @@ const App: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <button className="bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button">
-                  Ajouter au panier
-                </button>
+              <button
+                onClick={() => {
+                  addToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    quantity,
+                    image: product.images[0],
+                  });
+                }}
+                className="bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 cursor-pointer whitespace-nowrap !rounded-button"
+              >
+                Ajouter au panier
+              </button>
                 <button className="bg-pink-500 text-white px-8 py-4 rounded-full font-medium hover:bg-pink-600 cursor-pointer whitespace-nowrap !rounded-button">
                   Achat immédiat
                 </button>
